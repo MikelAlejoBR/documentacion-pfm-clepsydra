@@ -1,5 +1,26 @@
+% Heavily based on https://en.wikibooks.org/wiki/LaTeX/Title_Creation. Thank you!
 \begin{titlepage}
 
-  \lipsum[1]
+  \pagecolor{black}\afterpage{\nopagecolor}
+  \afterpage{\null\thispagestyle{empty}\newpage}
+
+  \color{white}
+  \centering
+
+  \includegraphics[scale=0.2]{img/logo_upvehu}\par
+  \includegraphics[scale=0.3]{img/logo_gugocreative}\par\vspace{1cm}
+
+  \vspace{3cm}
+
+  {\scshape\Large Proyecto de Fin de Máster \par}
+
+  \vspace{1.5cm}
+
+  {\Huge\bfseries Título del proyecto\par}
+
+  \vfill
+
+  \Large Mikel Alejo Barcina Ribera\par
+  {\itshape mabarcina001@ikasle.ehu.eus}
 
 \end{titlepage}
