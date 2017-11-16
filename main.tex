@@ -4,6 +4,8 @@
 \usepackage{csquotes}
 
 \usepackage{afterpage}
+\usepackage{hyperref}
+
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage[pagecolor=none]{pagecolor}
@@ -19,6 +21,8 @@
 \makeglossaries
 
 \begin{document}
+  \hypersetup{pageanchor=false}
+  \pagenumbering{roman}
 
   \input{tex/0_cover}
 
@@ -34,7 +38,13 @@
 
   \newpage
 
+  \pagenumbering{Roman}
+
   \input{tex/4_toc_lof_lot}
+  \newpage
+
+  \hypersetup{pageanchor=true}
+  \pagenumbering{arabic}
 
   \input{tex/5_content}
 
