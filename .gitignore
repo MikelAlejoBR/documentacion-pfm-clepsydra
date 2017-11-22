@@ -1,3 +1,5 @@
+build/
+
 # Created by https://www.gitignore.io/api/latex
 
 ### LaTeX ###
@@ -214,6 +216,7 @@ TSWLatexianTemp*
 
 # Kile
 *.backup
+*.kilepr
 
 # KBibTeX
 *~[0-9]*

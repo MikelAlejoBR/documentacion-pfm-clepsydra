@@ -1,0 +1,61 @@
+\documentclass[12pt,a4paper,notitlepage]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{csquotes}
+
+\usepackage{afterpage}
+\usepackage{hyperref}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[pagecolor=none]{pagecolor}
+
+\usepackage[backend=biber]{biblatex}
+\usepackage[acronym]{glossaries}
+
+\usepackage{lipsum}
+
+\addbibresource{tex/aux/db_bibliography.bib}
+\input{tex/aux/entries_acronyms}
+\input{tex/aux/entries_glossary}
+\makeglossaries
+
+\begin{document}
+  \hypersetup{pageanchor=false}
+  \pagenumbering{roman}
+
+  \input{tex/0_cover}
+
+  \input{tex/1_dedicatory}
+
+  \newpage
+
+  \input{tex/2_acknowledgements}
+
+  \newpage
+
+  \input{tex/3_abstract}
+
+  \newpage
+
+  \pagenumbering{Roman}
+
+  \input{tex/4_toc_lof_lot}
+  \newpage
+
+  \hypersetup{pageanchor=true}
+  \pagenumbering{arabic}
+
+  \input{tex/5_content}
+
+  \input{tex/6_conclusions}
+
+  \input{tex/7_appendix}
+
+  \input{tex/7-1_glossary_acronyms}
+
+  \input{tex/7-2_content}
+
+  \input{tex/7-3_bibliography}
+
+\end{document}
