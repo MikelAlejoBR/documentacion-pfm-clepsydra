@@ -12,13 +12,14 @@
 
 \usepackage[backend=biber]{biblatex}
 \usepackage[acronym]{glossaries}
+\usepackage{glossaries-extra}
 
 \usepackage{lipsum}
 
+\makeglossaries
 \addbibresource{tex/aux/db_bibliography.bib}
 \input{tex/aux/entries_acronyms}
 \input{tex/aux/entries_glossary}
-\makeglossaries
 
 \begin{document}
   \hypersetup{pageanchor=false}

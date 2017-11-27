@@ -25,6 +25,7 @@ Seguidamente se comprobará el \gls{edt} y se verificará si es necesario tambi�
 un cambio en dicha estructura.
 
 \subsection{Planificación de la gestión de requerimientos}
+\label{subsec:pgr}
 Los trabajadores usan actualmente una aplicación determinada de seguimiento y
 control de tiempos, clientes y proyectos. Es por ello que es crucial realizar
 entrevistas con los trabajadores de los diferentes departamentos para extraer
@@ -49,6 +50,72 @@ supongan un cambio drástico en el proyecto, se realizará una reunión con
 los interesados del proyecto para ratificar dicho cambio.
 
 \subsection{Recopilación de requerimientos}
+Tras realizar el proceso descrito en \ref{subsec:pgr}, se validaron los
+siguientes requerimientos que deberá tener la aplicación, ordenados por 
+importancia:
+
+\begin{enumerate}
+ \item Desarrollar un \gls{backend} en forma de \gls{api} \gls{rest} que
+ permita intercambiar datos con un \gls{frontend}
+
+ \item El \gls{backend} ha de proporcionar control de acceso para restringir el
+ contenido visible \textemdash ya sea restringiendo el acceso a recursos
+ completos o limitando la información mostrada en recursos específicos
+ \textemdash dependiendo de una serie de roles.
+
+ \item Los proyectos de la aplicación deberán tener una estructura común, y
+ los gestores deberán tener la opción de modificar dicha estructura según
+ las necesidades específicas de cada proyecto.
+
+ \item La aplicación permitirá crear informes que recopilen datos por proyecto,
+ departamento y por trabajador.
+
+ \item La aplicación permitirá crear listas de favoritos, plantillas, o
+ reordenar las tareas por usuario para facilitar la imputación de horas.
+
+ \item La aplicación permitirá cerrar y reabrir los proyectos.
+
+ \item La aplicación permitirá enviar recordatorios a aquellos usuarios que
+ se les haya olvidado imputar horas.
+
+ \item La aplicación permitirá a los gestores de proyectos imputar horas a
+ terceras personas, por ejemplo en el caso de que haya un trabajador por cuenta
+ propia contratado.
+
+ \item La aplicación tendrá una integración con \gls{jira}
+
+ \item La aplicación permitirá crear procesos a los gestores para facilitar
+ la gestión.
+
+ \item La aplicación permitirá visualizar de forma sencilla qué personas
+ están de vacaciones.
+
+ \item Todos los proyectos tendrán que compartir los mismos colores en las
+ categorías comunes.
+
+ \item Una aplicación de escritorio que facilite la imputación de horas
+ y, que entre las funcionalidades estándar de la aplicación, tenga una que
+ ayude a realizar el seguimiento de la tarea que se está realizando en
+ ese momento mediante un botón \textit{play / stop}.
+
+ \item La interfaz ha de ser rápida y sencilla de usar para imputar horas de
+ tareas individuales y un grupo de tareas.
+
+ \item La interfaz ha de mostrar a cada usuario cuántas horas ha imputado
+ a lo largo de la semana y cuántas le restan por imputar para completar sus
+ horas semanales.
+
+ \item La interfaz ha de mostrar sugerencias para las imputaciones: que analice
+ las últimas imputaciones para recomendar y ayudar a imputar cuando se trabaja
+ en las mismas tareas o en los mismos proyectos.
+
+ \item La interfaz ha de permitir a cada usuario limitar su vista de horas a la
+ jornada laboral que realiza, ahorrando así el tener que deslizarse hasta la
+ hora de inicio y hora de finalización de la jornada.
+
+ \item La interfaz ha de permitir a cada usuario configurar la vista de las
+ imputaciones: diaria, semanal y mensual.
+\end{enumerate}
 
 \subsection{Alcance}
 
