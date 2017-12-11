@@ -14,12 +14,203 @@ añadirán, modificarán o quitarán siempre teniendo en cuenta el alcance, los
 requerimientos y los recursos disponibles para el proyecto, de forma que
 no se ponga en peligro la viabilidad del mismo.
 
+\subsection{Definición de las actividades}
+\begin{enumerate}
 
-\subsection{Definición de actividades}
+ \scriptsize
+  \item Crear estructura del documento de \LaTeX .
+  \item Planificación.
+
+  \begin{enumerate}
+
+    \item Alcance
+
+    \begin{enumerate}
+
+      \item Documentar la gestión del alcance.
+      \item Documentar la gestión de los requerimientos.
+      \item Documentar la gestión de la validación del alcance.
+      \item Escribir un borrador con las preguntas a realizar en las
+        entrevistas.
+      \item Realizar entrevistas.
+
+      \begin{enumerate}
+
+        \item Realizar entrevista con los trabajadores de desarrollo.
+        \item Realizar entrevista con los trabajadores de gestión.
+        \item Realizar entrevista con los trabajadores de contabilidad.
+
+      \end{enumerate}
+
+      \item Procesar respuestas y elaborar los requerimientos.
+      \item Generar un alcance inicial.
+      \item Convocar una reunión con los interesados para validar el alcance.
+      \item Corregir los requerimientos y el alcance.
+      \item Documentar la gestión del seguimiento y control del alcance.
+      \item Generar un \gls{edt}.
+
+    \end{enumerate}
+
+    \item Tiempo
+
+    \begin{enumerate}
+
+      \item Documentar la gestión del tiempo del proyecto.
+      \item Realizar una definición de actividades.
+      \item Analizar y elaborar una secuencia de actividades.
+      \item Estimar la duración de las actividades.
+      \item Redactar la gestión del seguimiento y control de las actividades.
+
+    \end{enumerate}
+
+    \item Calidad
+
+    \begin{enumerate}
+
+      \item Documentar la gestión de la calidad del proyecto.
+      \item Especificar qué es considerada como calidad mínima y qué como
+        calidad añadida.
+      \item Redactar la gestión del seguimiento y control de la calidad.
+
+    \end{enumerate}
+
+    \item Riesgos
+
+    \begin{enumerate}
+
+      \item Documentar la gestión de los riesgos del \gls{pfm}.
+      \item Analizar y elaborar una lista de posibles riesgos.
+      \item Elaborar planes de contingencia.
+
+    \end{enumerate}
+
+  \end{enumerate}
+
+  \item Gestión
+  \label{item:gestion}
+
+  \begin{enumerate}
+
+    \item Realizar seguimiento y control del alcance.
+    \item Realizar seguimiento y control del tiempo.
+    \item Realizar seguimiento y control de la calidad.
+    \item Realizar seguimiento y control de los riesgos.
+
+  \end{enumerate}
+
+  \item Diseño
+  \label{item:diseno}
+
+  \begin{enumerate}
+
+    \item Realizar un \gls{modentrel} del dominio.
+    \item Diseñar y documentar la \gls{api}. \label{item:disdocapi}
+
+  \end{enumerate}
+
+  \item Desarrollo
+
+  \begin{enumerate}
+
+    \item Formación
+
+    \begin{enumerate}
+
+      \item Obtener información de los aspectos básicos de las \gls{api}.
+      \item Aprender los fundamentos del \gls{tdd}.
+      \item Aprender a usar el \gls{webframework} \textit{Symfony}
+        \footnote{\url{https://symfony.com/}} con \gls{api}s.
+      \item Recavar información sobre las diferentes formas de autenticación
+        con una \gls{api} \gls{rest}.
+
+    \end{enumerate}
+ 
+    \item Implementación
+
+    \begin{enumerate}
+
+      \item Preparar el entorno para la instalación del \gls{webframework}.
+      \item Instalar el \gls{webframework} y probar que funciona.
+      \item Instalar los módulos necesarios para proveer al \gls{webframework}
+        de las herramientas necesarias para desarrollar la \gls{api}.
+      \item Comenzar con el desarrollo del producto teniendo en cuenta el
+        \gls{modentrel}, mediante la metodología \gls{tdd}.
+
+    \end{enumerate}
+
+
+  \end{enumerate}
+
+\end{enumerate}
 
 \subsection{Secuencia de actividades}
+Las dependencias entre actividades vienen marcadas por el orden en el que se
+han definido en la sección anterior, con la excepción de la parte de
+\ref{item:gestion} Gestión, la cual se puede ir realizando según vaya avanzando
+el proyecto.
+
+Lo mismo ocurre con el apartado de \ref{item:diseno} Diseño, el cual a pesar
+de ser realizado antes de comenzar con la implementación del producto, es
+probable que se desarrolle junto con el producto, sobre todo la actividad de
+\ref{item:disdocapi} Diseñar y documentar la \gls{api}.
 
 \subsection{Estimación de la duración de las actividades}
+
+\begin{longtable}{|c|c|c|}
+\hline
+\textbf{Actividad} & \textbf{Estimación en minutos} & \textbf{Estimación en horas} \\ \hline
+1 & 720 & 12 \\ \hline
+2 & 1335 & 22,25 \\ \hline
+2.1. & 615 & 10,25 \\ \hline
+2.1.1. & 30 & 0,5 \\ \hline
+2.1.2. & 30 & 0,5 \\ \hline
+2.1.3. & 30 & 0,5 \\ \hline
+2.1.4. & 30 & 0,5 \\ \hline
+2.1.5. & 270 & 4,5 \\ \hline
+2.1.5.2. & 90 & 1,5 \\ \hline
+2.1.5.2. & 90 & 1,5 \\ \hline
+2.1.5.3. & 90 & 1,5 \\ \hline
+2.1.6. & 60 & 1 \\ \hline
+2.1.7. & 30 & 0,5 \\ \hline
+2.1.8. & 30 & 0,5 \\ \hline
+2.1.9. & 30 & 0,5 \\ \hline
+2.1.10 & 30 & 0,5 \\ \hline
+2.1.11. & 45 & 0,75 \\ \hline
+2.2. & 240 & 4 \\ \hline
+2.2.1. & 30 & 0,5 \\ \hline
+2.2.2. & 60 & 1 \\ \hline
+2.2.3. & 30 & 0,5 \\ \hline
+2.2.4. & 60 & 1 \\ \hline
+2.2.5. & 60 & 1 \\ \hline
+2.3. & 105 & 1,75 \\ \hline
+2.3.1. & 30 & 0,5 \\ \hline
+2.3.2. & 45 & 0,75 \\ \hline
+2.3.3. & 30 & 0,5 \\ \hline
+2.4. & 105 & 1,75 \\ \hline
+2.4.1. & 30 & 0,5 \\ \hline
+2.4.2. & 45 & 0,75 \\ \hline
+2.4.3. & 30 & 0,5 \\ \hline
+3. & 720 & 12 \\ \hline
+3.1. & 180 & 3 \\ \hline
+3.2. & 180 & 3 \\ \hline
+3.3. & 180 & 3 \\ \hline
+3.4. & 180 & 3 \\ \hline
+4. & 300 & 5 \\ \hline
+4.1. & 60 & 1 \\ \hline
+4.2. & 240 & 4 \\ \hline
+5. & 22020 & 367 \\ \hline
+5.1. & 720 & 12 \\ \hline
+5.1.1. & 120 & 2 \\ \hline
+5.1.2. & 120 & 2 \\ \hline
+5.1.3. & 300 & 5 \\ \hline
+5.1.4. & 180 & 3 \\ \hline
+5.2. & 21300 & 355 \\ \hline
+5.2.1. & 60 & 1 \\ \hline
+5.2.2. & 180 & 3 \\ \hline
+5.2.3. & 60 & 1 \\ \hline
+5.2.4. & 21000 & 350 \\ \hline
+\multicolumn{2}{|c|}{Horas totales} & 418,25 \\ \hline
+\end{longtable}
 
 \subsection{Seguimiento y control}
 La unidad de tiempo mínima que se utilizará para realizar el seguimiento y
