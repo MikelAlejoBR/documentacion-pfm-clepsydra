@@ -4,7 +4,10 @@
 \usepackage{csquotes}
 
 \usepackage{afterpage}
+\usepackage{enumitem}
+\setlist[enumerate]{label*=\arabic*.}
 \usepackage{hyperref}
+\usepackage{longtable}
 
 \usepackage{graphicx}
 \usepackage{xcolor}
@@ -12,13 +15,16 @@
 
 \usepackage[backend=biber]{biblatex}
 \usepackage[acronym]{glossaries}
+\usepackage{glossaries-extra}
+
+\usepackage{pmboxdraw}
 
 \usepackage{lipsum}
 
+\makeglossaries
 \addbibresource{tex/aux/db_bibliography.bib}
 \input{tex/aux/entries_acronyms}
 \input{tex/aux/entries_glossary}
-\makeglossaries
 
 \begin{document}
   \hypersetup{pageanchor=false}
