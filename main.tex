@@ -1,16 +1,18 @@
 \documentclass[12pt,a4paper,notitlepage]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
-\usepackage{csquotes}
 
 \usepackage{afterpage}
 \usepackage{enumitem}
 \setlist[enumerate]{label*=\arabic*.}
 \usepackage{hyperref}
 \usepackage{longtable}
+\usepackage[outputdir=build]{minted}
+\usepackage{csquotes}
 
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{xcolor-solarized}
 \usepackage[pagecolor=none]{pagecolor}
 
 \usepackage[backend=biber]{biblatex}
@@ -25,6 +27,8 @@
 \addbibresource{tex/misc/db_bibliography.bib}
 \input{tex/misc/entries_acronyms}
 \input{tex/misc/entries_glossary}
+
+\glsaddall
 
 \begin{document}
   \hypersetup{pageanchor=false}
