@@ -1,8 +1,26 @@
+\newglossaryentry{accidentalComplexity}{
+  name=Complejidad Accidental,
+  description={
+    Se llama así a la complejidad que no está asociada con la búsqueda y
+    desarrollo de la solución en sí, sino a la que está asociada al uso de
+    herramientas o el desarrollo de las mismas para alcanzar dicha solución
+  }
+}
+
 \newglossaryentry{apig}{
   name=API,
   description={
     Grupo de procedimientos definidos que facilitan la comunicación entre
     componentes de software
+  }
+}
+
+\newglossaryentry{bddg}{
+  name=Behavior-Driven Development,
+  description={
+    Se considera una extensión de \gls{tdd} que hace uso de un
+    \glslink{lde}{lenguaje de dominio específico} para convertir sentencias
+    escritas en lenguaje natural en pruebas ejecutables \cite{bdd_wiki}
   }
 }
 
@@ -13,10 +31,48 @@
   }
 }
 
+\newglossaryentry{cookie}{
+  name=Cookie,
+  description={
+    Pequeño fragmento de datos que las aplicaciones web envían a los usuarios,
+    y que generalmente estos últimos almacenan en su navegador, con la finalidad
+    de guardar cierta información de estado \textemdash como por ejemplo
+    sesiones, opciones de personalización de la aplicación o la lista del
+    carro de la compra digital\textemdash. Después esta información se manda
+    de vuelta al servidor para que este último adecúe la aplicación al usuario
+    que mandó la petición \cite{cookies_wiki}
+  }
+}
+
+\newglossaryentry{dbalg}{
+  name=DBAL,
+  description={
+    \gls{api} que tiene como objetivo unificar la comunicación entre la
+    aplicación y las distintas tecnologías de bases de datos, como pueden ser
+    MariaDB, MySQL, SQL Server, etc. La idea es proveer al desarrollador una
+    única interfaz que le evite tener que programar una interfaz por
+    tecnología de base de datos \cite{dbal_wiki}
+  }
+}
+
 \newglossaryentry{frontend}{
   name=Front End,
   description={
     Capa de visualización del software
+  }
+}
+
+\newglossaryentry{hateoasg}{
+  name=HATEOAS,
+  description={
+    Restricción de la arquitectura \gls{rest}, la cual pretende proveer de
+    indicaciones al consumidor de la \gls{api} sobre qué pasos se pueden dar en
+    ese punto mediante enlaces a las siguientes operaciones disponibles. En un
+    contexto de una aplicación de un banco, la respuesta que un cliente
+    recibiría al hacer una llamada a una operación de consulta de saldo, podría
+    incluir los enlaces a las operaciones de \textit{transferencia},
+    \textit{extracción de dinero} o \textit{consultar movimientos}, por ejemplo
+    \cite{hateoas_so} \cite{hateoas_wiki}
   }
 }
 
@@ -36,6 +92,35 @@
   }
 }
 
+\newglossaryentry{lde}{
+  name=Lenguaje de dominio específico,
+  description={
+    El \textit{LDE} o más conocido como \textit{DSL} \textemdash Domain
+    Specific Language\textemdash por sus siglas en inglés, es un lenguaje
+    informático especializado en un dominio específico, con el objetivo de
+    facilitar la representación de problemas y la resolución de los mismos
+    \cite{dsl_wiki}
+  }
+}
+
+\newglossaryentry{ormg}{
+  name=ORM,
+  description={
+    Esta técnica permite realizar mapeos de objetos y sus atributos a tablas
+    relacionales
+  }
+}
+
+\newglossaryentry{pruebascajanegra}{
+  name=Pruebas de caja negra,
+  description={
+    Las pruebas de caja negra son aquellas que analizan la funcionalidad de una
+    aplicación sin tener en cuenta la estructura interna o el funcionamiento de
+    dicha funcionalidad \cite{blackbox_wiki}, centrándose en proporcionar a la
+    funcionalidad una entrada y comprobando que la salida sea la esperada
+  }
+}
+
 \newglossaryentry{restg}{
   name=REST,
   description={
@@ -48,13 +133,47 @@
   }
 }
 
+\newglossaryentry{semanticweb}{
+  name=Web semántica,
+  description={
+    La web semántica es una extensión de la web que mediante estándares
+    propuestos por la W3C, pretenden impulsar formatos de datos comunes, como
+    pueden ser el RDFa, JSON-LD o HAL. De esta forma, se intenta impulsar una
+    web contextualizada en la que los datos tengan relación entre sí, incluso
+    si dichos datos están diseminados por distintos recursos web \cite{semweb}
+  }
+}
+
+\newglossaryentry{swaggerui}{
+  name=Swagger UI,
+  description={
+    Interfaz de usuario que muestra de forma muy amigable las operaciones de
+    una \gls{api}, además de ofrecer la posibilidad de interactuar con dichas
+    operaciones en la misma página donde se muestran. Esta documentación se
+    genera a partir de una especificación denominada Swagger
+  }
+}
+
+\newglossaryentry{testsfuncionales}{
+  name=Pruebas funcionales,
+  description={
+    Las pruebas funcionales o \textit{functional testing} se consideran como
+    un proceso para asegurar la calidad del software, y también como un
+    tipo de pruebas de la modalidad \glslink{pruebascajanegra}{caja negra}.
+    Generalmente, este tipo de pruebas se realizan introduciendo una entrada y
+    analizando la salida de la funcionalidad en cuestión que se está probando,
+    comprobando que todo funciona según las especificaciones de dicha
+    funcionalidad \cite{functionalt_wiki}
+  }
+}
+
 \newglossaryentry{webframework}{
   name=Web Framework,
   description={
     Un \textit{Web Framework} es una abstracción en la que un software que
-    provee de una funcionalidad genérica puede ser selectivamente modificada 
+    provee de una funcionalidad genérica puede ser selectivamente modificada
     adiciones, modificaciones o eliminaciones de código. Estos
-    \textit{framewokrs} ayudan en el desarrollo de aplicaciones web, incluyendo
+    \textit{frameworks} ayudan en el desarrollo de aplicaciones web, incluyendo
     servicios web, recursos web y \gls{api}s web. El objetivo de estas
     herramientas es el de automatizar ciertas tareas y ahorrar tiempo en las
     actividades comunes asociadas al desarrollo web
