@@ -5,7 +5,7 @@
 \usepackage{afterpage}
 \usepackage{enumitem}
 \setlist[enumerate]{label*=\arabic*.}
-\usepackage{hyperref}
+\usepackage[colorlinks=true]{hyperref}
 \usepackage{longtable}
 \usepackage[outputdir=build]{minted}
 \usepackage{csquotes}
@@ -16,7 +16,7 @@
 \usepackage[pagecolor=none]{pagecolor}
 
 \usepackage[backend=biber]{biblatex}
-\usepackage[acronym]{glossaries}
+\usepackage[acronym,toc,section=chapter]{glossaries}
 \usepackage{glossaries-extra}
 
 \usepackage{pmboxdraw}
@@ -28,10 +28,11 @@
 \input{tex/misc/entries_acronyms}
 \input{tex/misc/entries_glossary}
 
-\glsaddall
-
 \setcounter{biburllcpenalty}{7000}
 \setcounter{biburlucpenalty}{8000}
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
 
 \begin{document}
   \hypersetup{pageanchor=false}
@@ -63,12 +64,10 @@
 
   \input{tex/6_conclusions}
 
-  \input{tex/7_appendix}
+  \input{tex/7_glossary_acronyms}
 
-  \input{tex/7-1_glossary_acronyms}
+  \input{tex/8_bibliography}
 
-  \input{tex/7-2_content}
-
-  \input{tex/7-3_bibliography}
+  \input{tex/9_appendix}
 
 \end{document}
