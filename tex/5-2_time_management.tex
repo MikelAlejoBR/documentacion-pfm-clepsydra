@@ -1,18 +1,13 @@
 \section{Gestión del tiempo}
 \subsection{Planificación de la gestión del tiempo}
-Una vez se hayan conocido todos los requerimientos y se haya definido el
-alcance del proyecto, se procederá a realizar la primera estimación general
-del mismo. Para la parte de la estimación del desarrollo del producto, se
-pedirá opinión y quizás alguna directriz a algunos profesionales de la empresa,
-los cuales ya han trabajado en productos similares. De esta forma se podrá
-realizar una estimación más precisa. Se definirán las actividades con la
-máxima precisión posible, intentando minimizar el tener que definir más tareas
-a lo largo del proyecto.
-
-En el caso en el que sea necesario modificar la lista de actividades, se
-añadirán, modificarán o quitarán siempre teniendo en cuenta el alcance, los
-requerimientos y los recursos disponibles para el proyecto, de forma que
-no se ponga en peligro la viabilidad del mismo.
+\label{plan:time}
+Una vez se hayan conocido los requerimientos y se hayan realizado las
+entrevistas oportunas, se procederá a definir la gestión del tiempo del
+proyecto. No obstante, se evitará invertir demasiado tiempo y esfuerzo en
+esta parte, debido a que al no haber realizado ningún otro proyecto similar
+sobre el que basar las estimaciones, la estimación general del proyecto será
+imprecisa, incorrecta y estará llena de desviaciones. En cambio, el esfuerzo
+se focalizará en el apartado de seguimiento y control de esta parte.
 
 \subsection{Definición de las actividades}
 \begin{enumerate}
@@ -60,6 +55,7 @@ no se ponga en peligro la viabilidad del mismo.
       \item Analizar y elaborar una secuencia de actividades.
       \item Estimar la duración de las actividades.
       \item Identificar y recoger los hitos.
+      \item Realizar un diagrama de Gantt.
       \item Redactar la gestión del seguimiento y control de las actividades.
 
     \end{enumerate}
@@ -147,10 +143,10 @@ no se ponga en peligro la viabilidad del mismo.
 \subsection{Secuencia de actividades}
 Las dependencias entre actividades vienen marcadas por el orden en el que se
 han definido en la sección anterior, con la excepción de la parte de
-\ref{item:gestion} Gestión, la cual se puede ir realizando según vaya avanzando
+\ref{item:gestion} gestión, la cual se puede ir realizando según vaya avanzando
 el proyecto.
 
-Lo mismo ocurre con el apartado de \ref{item:diseno} Diseño, el cual a pesar
+Lo mismo ocurre con el apartado de \ref{item:diseno} diseño, el cual a pesar
 de ser realizado antes de comenzar con la implementación del producto, es
 probable que se desarrolle junto con el producto, sobre todo la actividad de
 \ref{item:disdocapi} Diseñar y documentar la \gls{api}.
@@ -160,7 +156,7 @@ probable que se desarrolle junto con el producto, sobre todo la actividad de
 \begin{longtable}{c|c|c}
 \textbf{Actividad} & \textbf{Estimación en minutos} & \textbf{Estimación en horas} \\ \hline
 1 & 720 & 12 \\ \hline
-2 & 1095 & 18,25 \\ \hline
+2 & 1155 & 19,25 \\ \hline
 2.1. & 615 & 10,25 \\ \hline
 2.1.1. & 30 & 0,5 \\ \hline
 2.1.2. & 30 & 0,5 \\ \hline
@@ -176,13 +172,14 @@ probable que se desarrolle junto con el producto, sobre todo la actividad de
 2.1.9. & 30 & 0,5 \\ \hline
 2.1.10 & 30 & 0,5 \\ \hline
 2.1.11. & 45 & 0,75 \\ \hline
-2.2. & 270 & 4,5 \\ \hline
+2.2. & 330 & 5,5 \\ \hline
 2.2.1. & 30 & 0,5 \\ \hline
 2.2.2. & 60 & 1 \\ \hline
 2.2.3. & 30 & 0,5 \\ \hline
 2.2.4. & 60 & 1 \\ \hline
 2.2.5. & 30 & 0,5 \\ \hline
 2.2.6. & 60 & 1 \\ \hline
+2.2.7. & 60 & 1 \\ \hline
 2.3. & 105 & 1,75 \\ \hline
 2.3.1. & 30 & 0,5 \\ \hline
 2.3.2. & 45 & 0,75 \\ \hline
@@ -210,7 +207,7 @@ probable que se desarrolle junto con el producto, sobre todo la actividad de
 5.2.2. & 180 & 3 \\ \hline
 5.2.3. & 60 & 1 \\ \hline
 5.2.4. & 21000 & 350 \\ \hline
-\multicolumn{2}{c|}{Horas totales} & 414,25 \\
+\multicolumn{2}{c|}{Horas totales} & 415,25 \\
 \end{longtable}
 
 \subsection{Hitos}
@@ -219,12 +216,47 @@ probable que se desarrolle junto con el producto, sobre todo la actividad de
   \item Inicio de la fase de desarrollo: 2017-12-01
   \item El segundo integrante se incorpora: 2018-01-15
   \item Fin de la fase de desarrollo: 2017-03-28
-  \item Fin del proyecto: 2017-04-16
 \end{itemize}
+
+\subsection{Diagrama de Gantt}
+El diagrama de Gantt, debido a su longitud, se ha dividido en tres diagramas
+más pequeños. Es un diagrama muy sencillo y con una granularidad muy grande
+con el objetivo de ser una guía genérica, junto con las actividades y los hitos
+recogidos, para encaminar el proyecto dentro de unas fechas y tiempos
+específicos. Debido a la longitud del proyecto, el diagrama se ha dividido
+en tres partes: la que recoge la fase inicial del proyecto, en la figura
+\ref{fig:diag:start}, la que muestra otro de los hitos importantes del proyecto
+hacia la mitad del mismo, en la figura \ref{fig:diag:middle}, y finalmente la
+parte que muestra el fin del proyecto, en la figura \ref{fig:diag:end}.
+
+\begin{figure}[h]
+    \center
+    \includegraphics[angle=90,scale=0.5]{img/gantt-start}
+    \caption{Diagrama de Gantt correspondiente a los hitos iniciales del
+      proyecto}
+    \label{fig:diag:start}
+\end{figure}
+
+\begin{figure}[h]
+    \center
+    \includegraphics[angle=90,scale=0.5]{img/gantt-middle}
+    \caption{Diagrama de Gantt correspondiente a los hitos hacia la mitad del
+      proyecto}
+    \label{fig:diag:middle}
+\end{figure}
+
+\begin{figure}[h]
+    \center
+    \includegraphics[angle=90,scale=0.5]{img/gantt-end}
+    \caption{Diagrama de Gantt correspondiente de los hitos finales del
+    proyecto}
+    \label{fig:diag:end}
+\end{figure}
 
 \subsection{Seguimiento y control}
 \label{subsec:syc:timeManagement}
-La unidad de tiempo mínima que se utilizará para realizar el seguimiento y
-control de cada actividad será de 15 minutos. Dichas actividades y el tiempo
-invertido en cada una de ellas será recogido en una tabla donde quede reflejada
-toda la información pertinente.
+Por los motivos especificados en la sección de planificación \ref{plan:time},
+el esfuerzo de la gestión de tiempo del proyecto se realizará en este apartado.
+La idea es recoger todas, o la gran mayoría de las actividades realizadas a lo
+largo del proyecto, de forma que después se puedan elaborar conclusiones sobre
+qué es importante estimar y qué no, en un proyecto de estas características.
