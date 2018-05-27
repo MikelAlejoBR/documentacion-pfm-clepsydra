@@ -213,6 +213,7 @@ class House
 \end{minted}
 
 \subsubsection{symfony/validator}
+\label{sec:tech:valid}
 Esta librería facilita la validación de los diferentes atributos de las
 entidades. La forma de especificación de las restricciones a las cuales están
 sujetas, es mediante anotaciones. Así que continuando con el ejemplo anterior:
@@ -264,6 +265,7 @@ formulario web se apliquen ciertas restricciones mientras que las llamadas a la
 \gls{api} podrían tener restricciones distintas.
 
 \subsubsection{symfony/serializer}
+\label{sec:serializer}
 El serializador es un componente que se utiliza para transformar objetos en
 formatos específicos, como pueden ser: JSON, XML,
 YAML\cite{symfony_serializer}... En el siguiente diagrama se ilustra el
@@ -335,6 +337,7 @@ gestionada por un administrador. Los grupos de los nombres en este caso son
 esos, pero pueden llamarse como se quiera.
 
 \subsubsection{behat/behat}
+\label{sec:tech:behat}
 Un \glslink{webframework}{framework} \gls{bdd} que permite realizar
 \glslink{testsfuncionales}{pruebas funcionales} mediante una sintaxis denominada
 \textit{Gherkin}, que facilita la redacción y lectura de las pruebas.
@@ -408,6 +411,7 @@ produzcan ningún error los pasos correspondientes se considerarán como
 correctos.
 
 \subsubsection{justinrainbow/json-schema}
+\label{tech:sec:jsonschema}
 Librería utilizada para validar objetos JSON con \textit{JSON Schema}. Por
 ejemplo, imaginemos que al realizar una petición al servidor para
 obtener información sobre una entidad \textit{House}, dicho servidor devuelve
@@ -452,6 +456,7 @@ para reducir el tamaño de las pruebas y concentrar en un único esquema las
 condiciones del objeto JSON que el servidor debería de enviar.
 
 \subsubsection{lexik/jwt-authentication-bundle}
+\label{sec:tech:jwt}
 Esta librería provee de una implementación de los \gls{jwt}: Esta tecnología
 es un estándar abierto\footnote{\url{https://tools.ietf.org/html/rfc7519}} que
 define una forma compacta y autocontenida \textemdash debido a que el token
@@ -484,6 +489,7 @@ petición, en una de las cabeceras de la misma: la cabecera
 \textit{Authorization}.
 
 \subsubsection{api-platform/api-pack}
+\label{sec:tech:apipack}
 Este es un metapaquete el cual agrupa otras librerías que dan la funcionalidad
 necesaria para incorporar API Platform en una instalación estándar de Symfony.
 Entre otras librerías, incluye \textit{api-platform/core}, que es la librería
