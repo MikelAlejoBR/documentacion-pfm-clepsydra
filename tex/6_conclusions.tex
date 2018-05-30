@@ -1,12 +1,14 @@
 \chapter{Cierre de proyecto y conclusiones}
-
 \section{Seguimiento y control}
 \subsection{Alcance}
-El alcance especificado ha sido cumplido minuciosamente, y de hecho la
-decisión de dividir el proyecto en dos proyectos más pequeños ha terminado
-siendo un acierto, ya que esto ha posibilitado el trabajar con 
+El alcance especificado ha sido cumplido minuciosamente, y la decisión de haber
+separado el proyecto en dos más pequeños parece haber sido un acierto, ya que
+me ha permitido desarrollar la aplicación junto con todas sus pruebas
+correspondientes, dando como resultado un \glslink{backend}{backend} que podría
+ser considerado como estable y sólido.
 
 \subsection{Tiempo}
+\label{sec:syc:time}
 El proyecto necesitó un total de 484 horas y 25 minutos para completarse, que
 se desglosan en 59 horas y 25 minutos de gestión y desarrollo de la
 documentación, 385 horas de desarrollo, y 40 horas más para la finalización de
@@ -78,6 +80,7 @@ tecnología para realizar una \gls{api} \gls{rest}, además de que cuando la
 utilicé fue hace tiempo, tuve que reciclarme para ponerme al día.
 
 \paragraph{Enero}
+\label{sec:tnc:jan}
 \textit{Nota: se puede encontrar el informe completo con las tareas detalladas
 en el anexo \ref{app:reports:january}}
 
@@ -124,7 +127,7 @@ y al tenerlo desarrollado prácticamente me dio la funcionalidad \gls{crud} de t
 la aplicación casi al instante.
 
 Además, las pruebas realizadas hasta el momento con la otra librería me permitieron
-integrar una librería de gestión de autenticación \textemdash véase \ref{sec:tech:jwt}
+integrar una librería de gestión de autentificación \textemdash véase \ref{sec:tech:jwt}
 \textemdash y otra de gestión de usuarios \textemdash \textit{friendsofsymfony/user-bundle}
 \textemdash.
 
@@ -208,7 +211,7 @@ sistema de notificaciones de correo. Se utilizó la librería \textit{swiftmaile
 debido a que es una librería completísima que facilita el envío de emails utilizando
 diferentes protocolos de transporte, soporta cifrado e inicio de sesión en
 servidores de correo, permite enviar mensajes en \gls{html}\cite{swiftmailer_symfony} y demás
-características. También porque es la librería recomendada por el propio \glslink{webframework}{framework}
+funcionalidades. También porque es la librería recomendada por el propio \glslink{webframework}{framework}
 Symfony, y otras muchas librerías más como por ejemplo la librería de gestión de usuarios
 \textit{friendsofsymfony/user-bundle}, la cual utiliza el ya mencionado \textit{Swiftmailer} como
 su sistema de gestión de notificaciones de correo electrónico. El problema principal residía en que
@@ -276,7 +279,7 @@ Tras tenerlo todo atado, continué desarrollando las validaciones de los diferen
 de las entidades, ya que hasta este punto únicamente había realizado unas validaciones
 genéricas.
 
-Finalmente la última característica que comencé a implementar en el mes de febrero fue la de la
+Finalmente la última funcionalidad que comencé a implementar en el mes de febrero fue la de la
 confirmación del registro por parte de los usuarios, ya que el sistema de invitaciones
 de registro funcionaba bien, pero el desarrollo de la confirmación se paró por el asunto
 de la modificación del dominio. Esto lo realicé con \gls{dto}s.
@@ -298,12 +301,12 @@ Después vino una tremenda refactorización de las pruebas de la aplicación. Ha
 las pruebas consistían en, generalmente, esperar unos valores específicos después de
 realizar ciertas peticiones a la base de datos que contenía los datos de prueba. No obstante,
 esto suponía un trabajo considerable y repetitivo a la hora de desarrollar una nueva
-característica junto con sus pruebas, o realizar modificaciones a las características ya existentes. Por
+funcionalidad junto con sus pruebas, o realizar modificaciones a las funcionalidades ya existentes. Por
 lo que decidí transformar las pruebas a pruebas de validación con JSON Schema \textemdash véase la sección  \ref{tech:sec:jsonschema} \textemdash
 en gran parte, lo que facilitaba mucho la mantenibilidad y reutilización de los esquemas en distintas pruebas.
 
 Finalicé el desarrollo del sistema de verificación de usuarios con el que había comenzado
-a trastear a finales de febrero, y aproveché para implementar la característica de cambio
+a trastear a finales de febrero, y aproveché para implementar la funcionalidad de cambio
 de contraseña y de cambio de email, todo ello desarrollado y validado con los \gls{dto}s.
 Junto con esto, ideé unas pequeñas restricciones
 e indicadores que ayudaban a identificar el estado de la cuenta cuando se estaba llevando
@@ -325,7 +328,7 @@ se restringían programando la lógica de negocio, y aplicando los grupos de ser
 entidades. Con todo esto, se desarrollaron también las pruebas correspondientes, comprobando que
 absolutamente todas las restricciones funcionaban como se pretendía que lo hicieran.
 
-Las últimas características que se desarrollaron antes de finalizar con la fase de desarrollo
+Las últimas funcionalidades que se desarrollaron antes de finalizar con la fase de desarrollo
 fueron las de abrir y cerrar proyectos \textemdash restringiendo la posibilidad de añadir o
 eliminar tareas por parte de ningún usuario, incluyendo los gestores \textemdash y permitir a
 los usuarios que marquen ciertas tareas como favoritas \textemdash para ayudarles a guardar tareas que se
@@ -337,19 +340,83 @@ El resto del tiempo se dedicó a ajustar la aplicación, arreglar fallos e imple
 
 \subsection{Calidad}
 Se ha alcanzado la calidad mínima especificada en sección de la gestión de
-calidad \ref{sec:qua:manag}, y debido a la falta de recursos disponibles, los
-elementos de calidad añadida quedaron totalmente fuera del desarrollo.
+calidad \ref{sec:qua:manag}. En cambio, los elementos de la calidad añadida
+no han sido desarrollados, ya que no se ha dispuesto de los recursos suficientes
+como para dedicarles un tiempo de desarrollo que fuera a culminar en una
+nueva funcionalidad completamente probada. Si no hubiera tenido los desvíos indicados en
+la sección de seguimiento y control del tiempo \textemdash véase sección 
+\ref{sec:syc:time} \textemdash, creo que la única funcionalidad que pudiera
+haber implementado es la onceava.
 
-Esta falta de recursos, o tiempo, se justifica por el tiempo que ha llevado
-
-El énfasis en las pruebas ha sido un éxito, ya que ha permitido identificar,
-tal y como se preveía, problemas de desarrollo a la hora de modificar código.
-Además, las pruebas han logrado dar pistas de, por ejemplo, cómo funcionan
-ciertos tipos de datos en el \glslink{webframework}{framework} Symfony, o de la
-cantidad
+Finalmente no he podido utilizar la metodología \gls{tdd} en el desarrollo, ya que
+generalmente mi intención era poder \textit{publicar} las funcionalidades cuanto
+antes para que el otro alumno las tuviera listas para trabajar sobre ellas. Antes de
+subir los cambios al repositorio que contenía el código de la aplicación, a veces solía
+dejar el código de los cambios en un servidor de pruebas que usábamos para juntar los
+dos desarrollos, y de mientras iba realizando las pruebas oportunas para que una vez
+se hubiera probado que todo funcionaba bien, subir los cambios al repositorio. Esta
+forma de trabajar me permitía tener un colchón de ventaja sobre el otro alumno y por lo
+tanto podía trabajar más relajadamente. Por contra, la desventaja
+de esta forma de trabajo era que si el otro alumno se ponía a desarrollar sobre una
+funcionalidad que no estaba probada, podía ocurrir que después tuviera que cambiar
+ligeramente su implementación para adaptarla a las correcciones aplicadas después
+de realizar las pruebas, algo que sucedió en alguna ocasión.
 
 \subsection{Riesgos}
 Debido a que los riesgos identificados \ref{section:risks} no se han mostrado
 significativamente a lo largo del desarrollo del proyecto, no se han tenido que
-poner en marcha los planes de contingencia \ref{section:continplans}.
+poner en marcha los planes de contingenciPor contra, la desventaja
+de esta forma de trabajo era que si el otro alumno a \ref{section:continplans}.
 
+Es cierto que hubo un momento en el que quizás podría considerarse que el riesgo
+de 
+\textit{``No tener un producto mínimo que sea funcional cuando el otro
+integrante comience a desarrollar su parte.''} estuvo cerca de cumplirse, ya
+que tal y como relato en la sección de seguimiento y control de tiempo, la
+que corresponde al mes de enero \ref{sec:tnc:jan}, la semana en la que se
+incorporó el otro alumno estaba todavía trasteando con las tecnologías de
+formación y las del desarrollo del producto final. Aunque también he de decir
+que el otro alumno siempre tuvo un \glslink{backend}{backend} operativo con
+el que comenzar su desarrollo.
+
+\section{Conclusiones}
+Con respecto al producto, se ha logrado el objetivo de construir una \gls{api}
+sobre un \glslink{backend}{backend} Symfony que permita ser consumida por
+diferentes \glslink{frontend}{frontends}. La aplicación en sí podría resumirse
+como un conjunto de librerías cohesionadas con las que se ha desarrollado
+un código que realiza la tarea propuesta. Una de las funcionalidades que
+quisiera destacar es que la aplicación en sí ha sido construida enteramente con
+proyectos de \glslink{opensource}{código abierto}, y es por ello que me apena el no haber conseguido
+convencer a los interesados para que el código de la aplicación terminara haciéndose
+público bajo una licencia de software libre o código abierto, aunque entiendo perfectamente
+los intereses corporativos.
+
+La gestión del proyecto, en mi opinión, ha sido aceptable. Creo que tomé una buena
+decisión en no invertir demasiado tiempo en intentar crear un plan de ruta, ya que
+después de todo el proceso de desarrollo, no creo que me hubiera acercado a las
+estimaciones iniciales. Lo que sí que es cierto es que se retrasó demasiado el
+comienzo del desarrollo, y también la formación en la tecnología, lo que en caso
+contrario podría haberme permitido desarrollar alguna característica más. El objetivo
+de realizar un seguimiento y control exhaustivo se ha cumplido, ya que he tomado nota
+de todo lo que he realizado a lo largo del desarrollo, aunque creo que para una
+próxima vez sería mejor categorizar las tareas realizadas, ya que de esta forma
+se podría elaborar un informe un poco más abstracto, que diera una mejor idea de
+todo lo realizado sin tener que leer una por una todas la tareas que se llevaron a cabo.
+
+En cuanto a los objetivos personales, estoy muy satisfecho de haber podido
+trabajar en un proyecto con el \gls{webframework}{framework} Symfony, ya que uno
+de mis objetivos era poder profundizar y entenderlo mucho mejor, y lo he conseguido.
+También quería seguir las mejores prácticas posibles, y es por ello que entre otras
+cosas he dedicado mucho tiempo a realizar las pruebas de las funcionalidades
+implementadas, y a intentar seguir minuciosamente los patrones y estilos de código
+recomendados, para que si en un futuro se abre el código fuente de la aplicación al público
+no sólo no se pueda poner en evidencia a la empresa por no seguir las prácticas recomendadas,
+sino que tampoco se me pueda poner en evidencia a mi por realizar un desarrollo chapucero. Sé
+que esto último es muy subjetivo, y que a pesar de mis buenas intenciones puede que
+no haya logrado mi objetivo, pero me quedo muy
+tranquilo al saber que he hecho todo lo posible por crear un producto de calidad y
+siguiendo lo que muchos expertos recomiendan y publican en las documentaciones
+oficiales, blogs y salas de soporte de las diferentes tecnologías.
+
+En general, creo que tanto los interesados como yo hemos terminado muy satisfechos
+con el trabajo que este proyecto ha supuesto.
