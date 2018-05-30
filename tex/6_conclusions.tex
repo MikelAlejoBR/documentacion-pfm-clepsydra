@@ -396,7 +396,7 @@ decisión en no invertir demasiado tiempo en intentar crear un plan de ruta, ya 
 después de todo el proceso de desarrollo, no creo que me hubiera acercado a las
 estimaciones iniciales. Lo que sí que es cierto es que se retrasó demasiado el
 comienzo del desarrollo, y también la formación en la tecnología, lo que en caso
-contrario podría haberme permitido desarrollar alguna característica más. El objetivo
+contrario podría haberme permitido desarrollar alguna funcionalidad más. El objetivo
 de realizar un seguimiento y control exhaustivo se ha cumplido, ya que he tomado nota
 de todo lo que he realizado a lo largo del desarrollo, aunque creo que para una
 próxima vez sería mejor categorizar las tareas realizadas, ya que de esta forma
@@ -420,3 +420,39 @@ oficiales, blogs y salas de soporte de las diferentes tecnologías.
 
 En general, creo que tanto los interesados como yo hemos terminado muy satisfechos
 con el trabajo que este proyecto ha supuesto.
+
+\section{Líneas de trabajo futuras}
+Las líneas de trabajo futuras creo que van encaminadas a completar el desarrollo
+de las funcionalidades opcionales que quedaron sin desarrollar, además de las
+funcionalidades futuras que quieran incluir en la aplicación.
+
+Cuando se me preguntó sobre cómo haría yo para comercializar un producto
+como este, planteé lo siguiente: al ser una aplicación que no es en sí novedosa,
+y de la que se pueden encontrar alternativas en el mercado, una idea podría ser
+la de abrir el código fuente y convertir el proyecto en uno de
+\glslink{opensource}{código abierto}, ofreciendo a su vez un servicio en el que
+la empresa se haría cargo de mantener una instancia del producto por un determinado
+precio, como por ejemplo hace GitLab\footnote{https://gitlab.com/}. Las ventajas
+de este modelo de negocio es que cualquiera puede atreverse a auditar, mejorar,
+sugerir correcciones, aportar críticas e incluso tomar parte en el desarrollo
+del producto, además de que daría una buena imagen a la empresa por tener un proyecto
+\glslink{opensource}{open source}. Las desventajas de este tipo de modelo de negocio
+son que no se puede dejar un producto como este sin actualizar mucho tiempo, y sin
+incorporar nuevas características o mejoras constantes, ya que un proyecto que tiene
+pinta de no haberse actualizado desde hace tiempo resulta poco atractivo. Además, otra
+de las desventajas es que hay que mimar el producto: para que no se ponga en duda
+la profesionalidad de la empresa, sería recomendable seguir las mejores prácticas posibles y
+documentar el código extensamente y de forma inteligible, entre otras cosas. Con todo esto,
+se podría apostar por pelear con el producto en un mercado que ya está saturado de este
+tipo de productos.
+
+El servicio prestado tendría que ser fiable y escalable, de forma que los potenciales
+clientes tuvieran la sensación de que merece la pena pagar por él. De forma que un
+cliente pudiera gestionar varias empresas, podría hacerse para que cada vez que el
+cliente diera de alta una de ellas, se lanzase una instancia de \gls{docker} con
+el producto, e insertando automáticamente ciertos datos que son necesarios para empezar
+a organizar la aplicación \textemdash básicamente la cuenta de un gestor con privilegios
+\textemdash.
+
+Por lo que, en resumen, estas propuestas esconden en sí más proyectos y líneas de trabajo
+futuras sobre las que extender el ecosistema del producto desarrollado en este proyecto.
