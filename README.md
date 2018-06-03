@@ -7,6 +7,7 @@ Al menos, los siguientes paquetes son necesarios:
 * `texlive`
 * `texlive-latex-extra`
 * `texlive-lang-spanish`
+* `texlive-lang-greek`
 * `biber`
 
 ## Preparar el entorno
