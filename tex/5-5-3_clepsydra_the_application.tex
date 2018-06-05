@@ -79,6 +79,39 @@ reestructurar el modelo.
 datos\label{fig:erdiag}}
 \end{figure}
 
+\subsubsection{Sistema de control de versiones y despliegue}
+Para el control de versiones, se utilizó \textit{git} \textemdash ya que era
+el sistema de control de versiones que mejor sabía utilizar\textemdash en una instancia de
+\gls{gitlab}, con el esquema de ramas ilustrado en la figura \ref{fig:branches}.
+
+\begin{figure}[h]
+    \center
+    \includegraphics[scale=1]{img/branching}
+    \caption{Diagrama del modelo de ramas utilizado en el repositorio}
+    \label{fig:branches}
+\end{figure}
+
+Este esquema de ramas es una versión simplificada basada en \textit{``A succesful
+Git branching model''}, de \textit{Vincent Driessen}: \url{https://nvie.com/posts/a-successful-git-branching-model/}.
+La idea era empezar con un \glslink{commit}{commit} inicial en la rama \textit{máster},
+e ir añadiendo \glslink{commit}{commits} en la rama \textit{develop}. Cada nueva
+funcionalidad se desarrollaría creando una nueva rama a partir de la rama \textit{develop},
+y una vez finalizada, se \glslink{merge}{fusionaría} la rama \textit{feature} con
+la rama \textit{develop}.  Este proceso se repetiría hasta que llegase el despliegue
+de la primera versión estable, cosa que se haría \glslink{merge}{fusionando} la
+rama \textit{develop} con la rama \textit{master}.
+
+Los despliegues y la ejecución de las pruebas de la aplicación se habían automatizado
+utilizando las herramientas de \gls{ci} / \gls{cd} que proporciona \textit{GitLab}. Tras cada
+\glslink{push}{push}, se ejecutaban las pruebas de la aplicación. Cuando una funcionalidad
+se \glslink{merge}{fusionaba} en la rama \textit{develop}, además de las pruebas, se
+desplegaban los cambios automáticamente al servidor de pruebas que el otro alumno
+utilizaba para desarrollar la aplicación. Faltó por configurar un despliegue a un
+servidor de producción cuando se \glslink{merge}{fusionaba} la rama \textit{develop}
+en \textit{master}, pero debido a que hasta el final del desarrollo no se hizo ninguna
+\glslink{merge}{fusión}, ni tampoco estaba el servidor de producción listo para
+alojar la aplicación, no merecía invertir tiempo en ello.
+
 \subsubsection{Roles}
 \label{sec:roles}
 Por deseo de los interesados, los usuarios de la aplicación se iban a dividir

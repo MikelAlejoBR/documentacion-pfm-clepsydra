@@ -1,17 +1,8 @@
-\newglossaryentry{accidentalComplexity}{
-  name=Complejidad Accidental,
-  description={
-    Se llama así a la complejidad que no está asociada con la búsqueda y
-    desarrollo de la solución en sí, sino a la que está asociada al uso de
-    herramientas o el desarrollo de las mismas para alcanzar dicha solución
-  }
-}
-
 \newglossaryentry{apig}{
   name=API,
   description={
-    Grupo de procedimientos definidos que facilitan la comunicación entre
-    componentes de software
+    Grupo de procedimientos calaremente definidos que facilitan la comunicación entre
+    componentes de software \cite{api_wiki}
   }
 }
 
@@ -36,7 +27,33 @@
 \newglossaryentry{backend}{
   name=Back End,
   description={
-    Capa de lógica y acceso a datos del software
+    Capa de lógica y acceso a datos del software \cite{backend_wiki}
+  }
+}
+
+\newglossaryentry{cdg}{
+  name=Continuous delivery,
+  description={
+    La entrega continua consiste en desarrollar el software en ciclos cortos, de forma
+    que se pueda realizar un lanzamiento o un despligue en cualquier comento. El objetivo
+    es construir, probar y lanzar el software con más rapidez y frecuencia \cite{cd_wiki}
+  }
+}
+
+\newglossaryentry{cig}{
+  name=Continuous Integration,
+  description={
+    La integración continua consiste en fusionar todas las copias funcionales de
+    los desarrolladores en una rama común, varias veces al día, con el objetivo de evitar problemas
+    de integración \cite{ci_wiki}
+  }
+}
+
+\newglossaryentry{commit}{
+  name=Commit,
+  description={
+    En sistemas de control de versiones, el \textit{commit} añade los últimos
+    cambios, realizados a parte del código, al repositorio \cite{commit_wiki}
   }
 }
 
@@ -67,7 +84,7 @@
 \newglossaryentry{dtog}{
   name=DTO,
   description={
-    Un objeto que transmite datos entre procesos\cite{dto_wiki}
+    Un objeto que transmite datos entre procesos \cite{dto_wiki}
   }
 }
 
@@ -76,7 +93,7 @@
   description={
     Docker es un software que realiza virtualización a nivel de sistema operativo,
     permitiendo lanzar \textit{``contenedores''} independientes desde una única
-    instancia de Linux, lo que ahorra el coste de gestionar máquinas virtuales\cite{docker_wiki}
+    instancia de Linux, lo que ahorra el coste de gestionar máquinas virtuales \cite{docker_wiki}
   }
 }
 
@@ -84,7 +101,7 @@
   name=Endpoint,
   description={
     La \gls{url} de una \gls{api} o un \glslink{backend}{backend} que responden
-    a una petición\cite{endpoint_so}
+    a una petición \cite{endpoint_so}
   }
 }
 
@@ -101,7 +118,15 @@
 \newglossaryentry{frontend}{
   name=Front End,
   description={
-    Capa de visualización del software
+    Capa de visualización del software \cite{backend_wiki}
+  }
+}
+
+\newglossaryentry{gitlab}{
+  name=GitLab,
+  description={
+    Software web de gestión de repositorios \textit{git} desarrollado con
+    una licencia \glslink{opensource}{opensource} \cite{gitlab_wiki}
   }
 }
 
@@ -116,24 +141,6 @@
     incluir los enlaces a las operaciones de \textit{transferencia},
     \textit{extracción de dinero} o \textit{consultar movimientos}, por ejemplo
     \cite{hateoas_so} \cite{hateoas_wiki}
-  }
-}
-
-\newglossaryentry{method_overriding}{
-  name=Method overriding,
-  description={
-    Es una característica que permite, en la programación orientada a objetos,
-    proveer de una implementación específica de un método en una subclase, que
-    sustituya la implementación del método de la súper clase \cite{method_over_wiki}
-  }
-}
-
-\newglossaryentry{modentrel}{
-  name=Modelo entidad-relación,
-  description={
-    Un modelo entidad-relación o diagrama \\ entidad-relación es una herramienta
-    para el modelado de datos que permite representar las entidades relevantes
-    de un sistema de información así como sus interrelaciones y propiedades
   }
 }
 
@@ -152,7 +159,7 @@
     de gestionar y lanzar máquinas virtuales \cite{hypervisor_wiki} 
     \textemdash. Permite virtualizar múltiples sistemas operativos Linux, 
     Windows, BSD, OS X y más, mediante una \gls{api} con la que los susodichos 
-    sistemas operativos pueden interactuar. \cite{kvm_wiki}
+    sistemas operativos pueden interactuar \cite{kvm_wiki}
   }
 }
 
@@ -168,11 +175,46 @@
   }
 }
 
+\newglossaryentry{merge}{
+  name=Merge,
+  description={
+    En sistemas de control de versiones, el \textit{merge} fusiona los cambios
+    realizados en dos ramas en una sola, resultando en una única colección de
+    ficheros que contienen los cambios de las dos ramas \cite{merge_wiki}
+  }
+}
+
+\newglossaryentry{method_overriding}{
+  name=Method overriding,
+  description={
+    Es una característica que permite, en la programación orientada a objetos,
+    proveer de una implementación específica de un método en una subclase, que
+    sustituya la implementación del método de la súper clase \cite{method_over_wiki}
+  }
+}
+
+\newglossaryentry{modentrel}{
+  name=Modelo entidad-relación,
+  description={
+    Un modelo entidad-relación o diagrama \\ entidad-relación es una herramienta
+    para el modelado de datos que permite representar las entidades relevantes
+    de un sistema de información así como sus interrelaciones \cite{modentrel_wiki} y propiedades
+  }
+}
+
 \newglossaryentry{ormg}{
   name=ORM,
   description={
-    Esta técnica permite realizar mapeos de objetos y sus atributos a tablas
-    relacionales
+    Técnica que permite consultar y manipular datos en una base de datos
+    utilizando un lenguage de programación orientado a objetos \cite{orm_so}. La técnica
+    consiste en transformar la representación lógica de los objetos en una forma atómica que pueda
+    ser guardada en la base de datos, manteniendo las propiedades de dichos objetos y sus relaciones
+    de tal forma que puedan volver a ser cargados como objetos. Un ejemplo son las bases de datos
+    \glslink{sql}{SQL}, las cuales sólo guardan valores escalares como enteros o cadenas de caracteres en
+    tablas relacionales\cite{orm_wiki}. La técnica permitiría transformar los objetos de tal forma que puedan ser
+    guardados en una tabla relacional, junto con sus relaciones, y que se puedan
+    recuperar con forma de objeto con el lenguaje de programación orientado a objetos, y sin tener que
+    usar \glslink{sql}{SQL}
   }
 }
 
@@ -183,7 +225,7 @@
     y que tiene una licencia de copyright asociada que permite estudiar,
     cambiar el código fuente y distribuirlo a cualquier persona y por cualquier
     motivo. Generalmente este software se suele desarrollar de una manera
-    colaborativa\cite{opensource_wiki}
+    colaborativa \cite{opensource_wiki}
   }
 }
 
@@ -197,15 +239,25 @@
   }
 }
 
+\newglossaryentry{push}{
+  name=Push,
+  description={
+    En el sistema de control de versiones \textit{git}, acción con la que se mandan
+    los cambios de tu repositorio al repositorio remoto \cite{push_gitscm}
+  }
+}
+
+
 \newglossaryentry{restg}{
   name=REST,
   description={
-    Los servicios web \gls{rest} son una herramienta que facilitan el
-    intercambio de información, y el uso de dicha información intercambiada
-    entre sistemas informáticos en internet. Dichos servicios hacen uso de una
-    serie de operaciones sin estados, que devuelven un resultado al consumidor
-    de dicho servicio, generalmente en formato XML, HTML, JSON o cualquier otro
-    formato definido
+    Arquitectura que define un grupo de restricciones y propiedades basadas en el
+    protocolo \gls{http}. Los servicios web que cumplen con esta arquitectura,
+    permiten la consulta y modificación de los recursos web mediante una serie
+    de \glslink{statelessprotocol}{operaciones sin estado}. Las respuestas que remiten estos servicios pueden
+    estar en una amplia variedad de formatos \textemdash como HTML, XML, JSON u
+    otros formatos \textemdash y suelen incluir información sobre el resultado
+    de la operación realizada \cite{rest_wiki}
   }
 }
 
@@ -217,6 +269,16 @@
     pueden ser el RDFa, JSON-LD o HAL. De esta forma, se intenta impulsar una
     web contextualizada en la que los datos tengan relación entre sí, incluso
     si dichos datos están diseminados por distintos recursos web \cite{semweb}
+  }
+}
+
+\newglossaryentry{statelessprotocol}{
+  name=Stateless protocol,
+  description={
+    Un protocolo sin estados es un protocolo de comunicación en el que ni el
+    emisor ni el receptor guardan información de estado sobre el otro. Un ejemplo
+    de un protocolo sin estados es una sesión \gls{udp}, ya que ni el emisor ni el receptor
+    guardan información de la sesión en curso mientras ésta dure \cite{stateless_wiki}
   }
 }
 
@@ -263,6 +325,6 @@
     repetición de un ciclo de desarrollo muy corto: los requerimientos se
     convierten en casos de pruebas muy específicos, y únicamente está permitido
     programar para hacer que dichos casos de prueba se realicen
-    satisfactoriamente
+    satisfactoriamente \cite{tdd_wiki}
   }
 }
