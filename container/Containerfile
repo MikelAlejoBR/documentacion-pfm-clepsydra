@@ -1,0 +1,21 @@
+# Fix the Debian version so that we can build this in the future...
+FROM docker.io/debian:12.5-slim
+
+# Install the specified packages from the README.md file.
+RUN apt-get \
+    update \
+    && apt-get install --assume-yes --no-install-recommends \
+    biber=2.18-1 \
+    python3-pygments=2.14.0+dfsg-1 \
+    texlive=2022.20230122-3 \
+    texlive-bibtex-extra=2022.20230122-4 \
+    texlive-latex-extra=2022.20230122-4 \
+    texlive-lang-spanish=2022.20230122-1 \
+    texlive-lang-greek=2022.20230122-1 \
+    texlive-plain-generic=2022.20230122-4 \
+    && apt-get clean \
+    && rm --force --recursive /var/lib/apt/lists/* \
+    && mkdir /home/user
+
+# Set our working directory to "user".
+WORKDIR /home/user
