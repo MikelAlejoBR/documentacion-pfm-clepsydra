@@ -1,3 +1,453 @@
-\chapter{Lorem ipsum}
+\chapter{Cierre de proyecto y conclusiones}
+\section{Seguimiento y control}
+\subsection{Alcance}
+El alcance especificado ha sido cumplido minuciosamente, y la decisión de haber
+separado el proyecto en dos más pequeños parece haber sido un acierto, ya que
+me ha permitido desarrollar la aplicación junto con todas sus pruebas
+correspondientes, dando como resultado un \glslink{backend}{backend} que podría
+ser considerado como estable y sólido.
 
-\lipsum[1]
+\subsection{Tiempo}
+\label{sec:syc:time}
+El proyecto necesitó un total de 484 horas y 25 minutos para completarse, que
+se desglosan en 59 horas y 25 minutos de gestión y desarrollo de la
+documentación, 385 horas de desarrollo, y 40 horas más para la finalización de
+la documentación, retoques finales y preparación de la defensa. La siguiente
+lista lo resume:
+
+\begin{itemize}
+    \item Gestión: 59 horas y 25 minutos.
+    \begin{itemize}
+        \item Noviembre: 53 horas y 55 minutos.
+        \item Diciembre: 20 horas y 15 minutos.
+        \item Marzo: 4 horas y 15 minutos.
+    \end{itemize}
+    \item Desarrollo: 385 horas.
+    \begin{itemize}
+        \item Diciembre: 20 horas y 45 minutos.
+        \item Enero: 155 horas.
+        \item Febrero: 95 horas y 30 minutos.
+        \item Marzo: 113 horas y 45 minutos.
+    \end{itemize}
+    \item Gestión final: 40 horas.
+\end{itemize}
+
+Esto supera por 68 horas y 10 minutos estimación inicial de 416 horas y 15 
+minutos la planificación de tiempo realizada para el proyecto, y por 34 horas y
+25 minutos los recursos totales evaluables del proyecto: 450 horas.
+
+\subsubsection{Fase inicial}
+\textit{Nota: se puede encontrar el informe completo con las tareas detalladas
+en el anexo \ref{app:reports:start}}
+
+Los principales desvíos se han dado en la gestión al inicio del
+proyecto. Si bien se estimaba que el inicio del desarrollo comenzaría hacia el
+28 de Noviembre de 2017, no es hasta el 14 de Diciembre de 2017 que se tiene
+constancia de la primera hora invertida en el desarrollo del producto. Esto se
+traduce en 54 horas y 25 minutos, que se invirtieron en las tareas descritas en
+la lista de abajo. También cabe mencionar que durante ese
+periodo, la dedicación no fue exclusivamente al proyecto, sino que se compaginó
+con otras tareas independientes al mismo, que fueron realizadas para la
+empresa. Volviendo a la lista, el plasmar toda la
+información en el documento \LaTeX llevó más tiempo del deseado, ya que tuve
+que volver a aprender a utilizar \LaTeX correctamente, los problemas de
+compilación, y sobre todo los problemas de corrección y adecuación de formato.
+
+Al comienzo del proyecto me dediqué sobre todo a realizar las entrevistas a los
+diferentes grupos de interesados de la aplicación, procesar las respuestas que me
+dieron y plasmar los requerimientos extraídos en la sección de requerimientos \textemdash véase sección \ref{subsec:rdr} \textemdash
+de este documento.
+
+Se realizaron varias reuniones a lo largo de la fase inicial. En ellas se definió
+la idea que tenían los interesados sobre lo que se quería realizar en este proyecto,
+y sobre todo se usaron para validar lo que yo había recogido como requerimientos
+y la definición del alcance.
+
+Por último se dedicó tiempo a diseñar y modelar el \glslink{modentrel}{modelo entidad-relación}.
+
+\subsubsection{Fase de desarrollo}
+\paragraph{Diciembre}
+\textit{Nota: se puede encontrar el informe completo con las tareas detalladas
+en el anexo \ref{app:reports:december}}
+
+En diciembre, sobre todo me dediqué a las tareas de instalación y configuración
+del \glslink{webframework}{framework} Symfony, aprender sobre algunos componentes clave
+y poner en práctica lo aprendido en proyectos de prueba.
+
+\paragraph{Enero}
+\label{sec:tnc:jan}
+\textit{Nota: se puede encontrar el informe completo con las tareas detalladas
+en el anexo \ref{app:reports:january}}
+
+Uno de mis objetivos con la aplicación era que tuviera una documentación de la
+\gls{api} clara y concisa. Es por ello que utilicé la librería
+\textit{nelmio/api-doc-bundle}, la cual facilita la documentación de los
+diferentes \glslink{endpoint}{endpoints} que conforman una \gls{api}.
+
+En un principio, comencé a usar \textit{friendsofsymfony/rest-bundle} para
+generar los \glslink{endpoint}{endpoints} de la \gls{api}, en vez de utilizar
+API Platform. Esto se debe a que en un principio consideré más apropiado utilizar
+una librería que no trajera nada por defecto, de forma que me sirviera de formación
+para cuando usase el \glslink{webframework}{framework} de API Platform.
+
+Después de esto, me dediqué a configurar el serializador \textemdash véase
+\ref{sec:serializer} \textemdash \textit{jms/serializer}, básicamente porque
+lo recomendaba la librería \\ \textit{friendsofsymfony/rest-bundle}.
+
+Una vez configurado, creé el dominio en base al \glslink{modentrel}{modelo 
+entidad-relación} que había diseña, ya que hasta entonces había configurado
+el serializador con unas entidades simples, que me permitieran centrarme en
+entender cómo trabajar con él sin tener que lidiar con la incertidumbre de
+no saber si algo no funciona por causa del serializador o las entidades.
+
+A continuación tocó crear lo que se denominan \textit{fixtures}, o datos de
+prueba, con las entidades creadas, de forma que pudiera comprobar que no
+existían fallos de diseño en el \glslink{modentrel}{modelo entidad-relación}.
+Por desgracia sí que existían problemas no con el diseño, sino con la
+implementación del mismo, así que tuve que lidiar con ellos y retocar las
+entidades para que funcionaran bien con el \glslink{webframework}{framework}
+Symfony.
+
+Con las bases ya controladas, procedí a crear unos \glslink{endpoint}{endpoints}
+de prueba con una de las entidades, realicé las pruebas correspondientes y contrasté
+los resultados obtenidos. Obviamente hubo mucha prueba y error, pero una vez
+conseguido, continué configurando el serializador para intentar limitar la
+información que se devolvía dependiendo de los roles establecidos.
+
+Debido a que la fecha de incorporación del alumno que se iba a encargar del \glslink{frontend}{frontend}
+de la aplicación estaba muy cerca, me puse manos a la obra con API Platform. La
+gran ventaja de este \glslink{webframework}{framework} para \gls{api}s es que
+genera automáticamente todos los \glslink{endpoint}{endpoints} a partir de un modelo,
+y al tenerlo desarrollado prácticamente me dio la funcionalidad \gls{crud} de toda
+la aplicación casi al instante.
+
+Además, las pruebas realizadas hasta el momento con la otra librería me permitieron
+integrar una librería de gestión de autentificación \textemdash véase \ref{sec:tech:jwt}
+\textemdash y otra de gestión de usuarios \textemdash \textit{friendsofsymfony/user-bundle}
+\textemdash.
+
+No obstante, en ese momento uno de los interesados de la aplicación me dijo que no
+podía usar una versión de Symfony que no fuera la estable, la cual por aquel
+entonces era la versión 3.4. El problema residía en que API Platform usaba una
+versión de Symfony superior, y que yo no encontraba la forma de hacer que
+los dos \glslink{webframework}{frameworks} fueran compatibles en la versión que
+el interesado pedía. Así que mientras encontraba una solución, continué con
+el trabajo de formación que había realizado, ya que esto le daba al menos un
+\glslink{backend}{backend} funcional al alumno que se había incorporado.
+
+Finalmente encontré dónde surgía la incompatiblidad: cuando intentaba integrar
+la versión 3.4 de Symfony con la versión estándar de API Platform, este último
+\glslink{webframework}{framework} se quejaba porque la versión de Symfony no
+estaba entre sus candidatas para poder funcionar correctamente. Por lo tanto,
+indagando en las dependencias de la versión estándar, descubrí que ésta
+dependía de otro paquete \textemdash véase \ref{sec:tech:apipack} \textemdash el cual
+proveía de toda la funcionalidad necesaria, y aceptaba la versión 3.4 de Symfony
+para poder funcionar con ella.
+
+Así que con alivio, pude volver a utilizar API Platform, aunque tuve que
+trabajar a marchas forzadas para instalar cuidadosamente, una por una, el resto
+de librerías necesarias y asegurándome de que cada paso quedaba bien registrado
+en el repositorio donde tenía el código fuente de la aplicación. Al fin y al
+cabo, al instalar la versión no estándar de API Platform, había ciertas librerías
+que no estaban incluidas \textemdash sobre todo aquellas relativas a las pruebas
+o a proporcionar integraciones con otras librerías \textemdash, tenía que repasar
+qué es lo que faltaba para incluirlo en la aplicación.
+
+Lo próximo fue meterse de lleno en aprender más sobre API Platform: cómo realizar
+los denominados como subrecursos \textemdash véase el párrafo siguiente \textemdash, documentar la API \textemdash ya que a pesar de
+que en esencia valía lo que aprendí con mis primeras pruebas de generación de
+la documentación, API Platform lo integraba de otra forma \textemdash, configurar
+Behat \textemdash véase \ref{sec:tech:behat} \textemdash y solucionar problemas
+varios relacionados con la implementación, las pruebas y cumplir con ciertos
+requerimientos que ya me empezaba a plantear el otro alumno \textemdash como que
+cuando un usuario iniciaba sesión, se mandase también su identificador de usuario
+para poder guardarlo y usarlo en peticiones futuras \textemdash.
+
+Sobre los subrecursos: \textit{subresources} en inglés, son aquellos que permiten
+obtener unos resultados filtrados con respecto a dos o más entidades. Por ejemplo, si
+en un dominio existen las entidades \textit{User} y \textit{Book}, un
+subrecurso útil podría ser el de \url{https://example.org/users/21/books} para
+obtener la lista de libros del usuario con el identificador 21.
+
+\paragraph{Febrero}
+\textit{Nota: se puede encontrar el informe completo con las tareas detalladas
+en el anexo \ref{app:reports:february}}
+En el modelo algunas de las relaciones se establecieron del tipo \textit{``uno a uno''},
+y por algún motivo daban problemas a la hora de insertar datos en la base de datos,
+sobre todo con las restricciones de referencia a claves extranjeras en las
+operaciones de eliminación. Se invirtió mucho tiempo en investigar qué podría estar
+causando este problema, mirando las sentencias \gls{sql} que se generaban e intentando
+reproducir paso a paso el error que se estaba produciendo, ya que curiosamente cuando
+aplicaba una relación \textit{``uno a uno''} sin el \glslink{webframework}{framework}
+API Platform el error no se daba, pero con esa librería en el proyecto sí. Finalmente
+tras mucho indagar no pude dar con el problema, y a pesar de haber expuesto
+el problema en los canales de soporte pertinentes, nadie parecía encontrar explicación
+a lo que ocurría. No obstante el problema se pudo esquivar debido a que después
+de analizar el \glslink{modentrel}{modelo entidad-erlación} y debatirlo con los
+interesados, se debatió que tenía más sentido sustituir dichas relaciones por unas
+del tipo \textit{``uno a n''}, como era en el caso de los presupuestos de un
+proyecto, por ejemplo. Aunque la cosa no acabó aquí ya que se dedicó más tiempo a
+intentar descubrir qué era lo que causaba el problema, y cómo podría solucionarse,
+a pesar de que ya no hiciera falta saberlo, pero no hubo manera. Por lo que finalmente
+asumí que probablemente se debería a mi torpeza, y decidí no perder más el tiempo con
+ello, a pesar de no quedarme satisfecho.
+
+Continué implementando las pruebas restantes para el resto de entidades de la aplicación,
+ya que al estar el segundo alumno desarrollando su parte, no quería entorpecer su avance
+y por lo tanto me centraba en implementar las cosas que me iba pidiendo, además de los
+requerimientos que tenía que cumplir en la aplicación. Pero siempre con la idea en mente
+de completar todas las pruebas, y finalmente pude hacerlo dejando la aplicación en un
+estado de \textit{``completamente probada''}. Obviamente estas pruebas evolucionarían
+y se modificarían en el futuro, y se añadirían nuevas según desarrollase nuevas cosas,
+pero al menos me había quitado esa \textit{espinita}.
+
+Uno de los elementos que supuso un cambio significativo fue la inclusión del
+sistema de notificaciones de correo. Se utilizó la librería \textit{swiftmailer/swiftmailer},
+debido a que es una librería completísima que facilita el envío de emails utilizando
+diferentes protocolos de transporte, soporta cifrado e inicio de sesión en
+servidores de correo, permite enviar mensajes en \gls{html}\cite{swiftmailer_symfony} y demás
+funcionalidades. También porque es la librería recomendada por el propio \glslink{webframework}{framework}
+Symfony, y otras muchas librerías más como por ejemplo la librería de gestión de usuarios
+\textit{friendsofsymfony/user-bundle}, la cual utiliza el ya mencionado \textit{Swiftmailer} como
+su sistema de gestión de notificaciones de correo electrónico. El problema principal residía en que
+a pesar de que API Platform no recomendaba la librería de gestión de usuarios ya mencionada, sí
+proveía de un \textit{bridge}\cite{apip_fosuser} o puente que facilitaba la integración en el \glslink{webframework}{framework}
+de creación de \gls{api}s. No especificaba cuáles eran los motivos, pero descubrí
+uno de ellos al empezar con el desarrollo de las notificaciones de correo: las
+funcionalidades de recuperación de contraseña, registro, envío de email de confirmación
+y demás requerían de la visita en un recurso web. Por lo tanto, su forma de implementar
+las notificaciones, y las generaciones de \gls{url}s con identificadores únicos para
+verificar la identidad del usuario que realiza las acciones, estaban muy enfocadas a
+proporcionar dichos servicios accediendo a diferentes recursos web. El problema
+fundamental residía en que yo estaba desarrollando una \gls{api} \gls{rest}, la
+cual debería ser totalmente independiente del \glslink{frontend}{frontend} con el
+que se realizan las peticiones, y por lo tanto el hecho de tener que obligar a que
+las capas de visualización tuvieran que visitar ciertos recursos web lo consideraba
+incoherente y limitante. La solución era tener que realizar \textit{``\glslink{method_overriding}{overrides}''}
+de muchísimas partes de la librería de gestión de usuarios, para intentar adaptarla a
+mis necesidades. Así que siguiendo el consejo de API Platform, decidí crear un sistema
+de usuarios personalizado \textemdash denominado \textit{``custom user provider''} en
+el mundo de Symfony\textemdash, justamente porque el trabajo de tener que crear dicho
+sistema iba a ser muy similar al de tener que adaptar una librería que no estaba diseñada
+para trabajar con \gls{api}s.
+
+Una vez se implementó el sistema de usuarios y se integró con \textit{Swiftmailer},
+se pasó a desarrollar un sistema de invitaciones para restringir el registro en la
+aplicación: sólo los gestores con privilegios podrían invitar, mediante el envío
+automatizado de un correo electrónico desde la aplicación, a ciertos usuarios a ser
+parte de la aplicación. Estos usuarios tendrían que validar su correo haciendo clic en
+el enlace correspondiente en su correo electrónico, que después el \glslink{frontend}{frontend}
+traduciría en una petición a la \gls{api}.
+
+En ése momento, tras revisar el dominio, me di cuenta de que había cometido algunos
+errores en el diseño del mismo. No eran errores graves, ya que se podían corregir
+fácilmente sin tener que desechar nada de lo desarrollado hasta la fecha, pero requerían
+algunos cambios significativos que sobre todo iban a suponer un trabajo considerable
+en cuanto a modificar todas las pruebas afectadas. La causa de estos errores se debe a lo siguiente:
+antes de realizar el primer \glslink{modentrel}{modelo entidad-relación},
+se me presentó un modelo de gestión de la empresa que habían desarrollado y que querían
+que sustituyera el modelo de gestión que venían usando hasta entonces. Desarrollé el
+\glslink{modentrel}{modelo entidad-relación} equivalente, y lo presenté a los interesados.
+No obstante, al validarlo con casos reales y actuales de la empresa, mezclamos conceptos
+de la aplicación de gestión que se estaba usando actualmente con los nuevos conceptos del modelo,
+y eso unido al \glslink{modentrel}{modelo entidad-relación} diseñado generó muchísima confusión.
+A pesar de todo ello, el modelo parecía válido porque no encontramos limitaciones a la hora
+de validar los casos reales. Obviamente, y como menciono al principio del párrafo, al revisar
+el modelo de nuevo encontré errores que achaqué a la confusión a la hora de debatir este tema,
+y mi falta de clarividencia a la hora de plasmar lo que resultó de dichos
+debates, aunque en mi defensa he de decir que todos los involucrados en los susodichos debates
+salimos algo confundidos de ellos. Aún así, estos errores no suponían cambios muy
+significativos, así que adapté el \glslink{modentrel}{modelo entidad-relación} al modelo
+final que se presenta en la figura \ref{fig:erdiag}, y presenté los cambios a los interesados,
+esta vez sin tanta confusión y con más facilidad debido a las adaptaciones realizadas. Las
+consecuencias de estos cambios fueron el tener que adaptar las pruebas de la aplicación y los
+correspondientes datos de prueba, lo que supuso un trabajo considerable. Por si eso fuera poco,
+el consumo de memoria de las pruebas se disparó, o más bien me fijé que era muy alto. Tras
+mucho trastear e investigar por si había realizado algo fuera de lo común que estuviera
+malgastando recursos, pregunté en ciertos canales de desarrolladores que me comentaron que
+no tenía nada de que preocuparme ya que los consumos estaban dentro de lo normal. De hecho,
+de ahí a un tiempo, en una actualización de la librería de pruebas, el consumo descendió muy
+significativamente, lo que me dio la prueba definitiva de que realmente ése consumo alto de
+recursos no se debía a algún fallo cometido por mi parte.
+
+Tras tenerlo todo atado, continué desarrollando las validaciones de los diferentes campos
+de las entidades, ya que hasta este punto únicamente había realizado unas validaciones
+genéricas.
+
+Finalmente la última funcionalidad que comencé a implementar en el mes de febrero fue la de la
+confirmación del registro por parte de los usuarios, ya que el sistema de invitaciones
+de registro funcionaba bien, pero el desarrollo de la confirmación se paró por el asunto
+de la modificación del dominio. Esto lo realicé con \gls{dto}s.
+Es decir: la validación en el \glslink{webframework}{framework} Symfony se realiza
+sobre las entidades \textemdash véase la sección de validaciones \ref{sec:tech:valid}\textemdash,
+y por lo tanto estos \textit{DTO}s no son más que pequeñas entidades que sirven para un
+propósito específico, como puede ser el recoger el identificador y el correo electrónico
+de la confirmación del usuario.
+
+\paragraph{Marzo}
+\textit{Nota: se puede encontrar el informe completo con las tareas detalladas
+en el anexo \ref{app:reports:march}}
+
+En marzo seguí con las modificaciones en la serialización de las entidades, tanto para
+limitar la información que se mostraba a cada rol del usuario como para satisfacer las
+necesidades de navegación e información que me pedía el desarrollador del \glslink{frontend}{frontend}.
+
+Después vino una tremenda refactorización de las pruebas de la aplicación. Hasta entonces,
+las pruebas consistían en, generalmente, esperar unos valores específicos después de
+realizar ciertas peticiones a la base de datos que contenía los datos de prueba. No obstante,
+esto suponía un trabajo considerable y repetitivo a la hora de desarrollar una nueva
+funcionalidad junto con sus pruebas, o realizar modificaciones a las funcionalidades ya existentes. Por
+lo que decidí transformar las pruebas a pruebas de validación con JSON Schema \textemdash véase la sección  \ref{tech:sec:jsonschema} \textemdash
+en gran parte, lo que facilitaba mucho la mantenibilidad y reutilización de los esquemas en distintas pruebas.
+
+Finalicé el desarrollo del sistema de verificación de usuarios con el que había comenzado
+a trastear a finales de febrero, y aproveché para implementar la funcionalidad de cambio
+de contraseña y de cambio de email, todo ello desarrollado y validado con los \gls{dto}s.
+Junto con esto, ideé unas pequeñas restricciones
+e indicadores que ayudaban a identificar el estado de la cuenta cuando se estaba llevando
+a cabo un proceso de cambio de contraseña, recuperación de contraseña o cambio de dirección de correo electrónico: por ejemplo, si se comenzaba
+con el proceso de recuperar la contraseña pero el usuario iniciaba sesión antes de completarlo,
+se entendía que o bien no lo había solicitado o que ya se había acordado de ella, y por lo tanto
+el proceso se daba por finalizado sin que el usuario tuviera que hacer nada más.
+
+Después de limitar la información enviada por cada rol de usuario, terminé de implementar el sistema
+de control de acceso, el cual hasta el momento estaba mínimamente desarrollado para probar la restricción de
+acceso a ciertos recursos. Terminó siendo muy sencillo gracias a la herencia de roles de Symfony,
+que facilita la gestión de los mismos, y que permite hilar muy fino en cuanto a los recursos o
+serie de recursos que se quieren restringir mediante el uso de expresiones regulares. Por ejemplo, 
+se puede restringir la zona \url{https://example.org/admin} con una expresión regular \textit{\^/admin} que haga que todas las
+subrutas como por ejemplo \url{https://example.org/admin/check_status} estén restringidas a un rol.
+Los recursos que debían estar disponibles para los tres roles, pero que debían devolver una información u otra,
+se restringían programando la lógica de negocio, y aplicando los grupos de serialización
+\textemdash véase sección \ref{sec:serializer} \textemdash que se habían desarrollado para las
+entidades. Con todo esto, se desarrollaron también las pruebas correspondientes, comprobando que
+absolutamente todas las restricciones funcionaban como se pretendía que lo hicieran.
+
+Las últimas funcionalidades que se desarrollaron antes de finalizar con la fase de desarrollo
+fueron las de abrir y cerrar proyectos \textemdash restringiendo la posibilidad de añadir o
+eliminar tareas por parte de ningún usuario, incluyendo los gestores \textemdash y permitir a
+los usuarios que marquen ciertas tareas como favoritas \textemdash para ayudarles a guardar tareas que se
+repiten muchas veces y poder reutilizarlas sin tener que volver a introducir todos los datos\textemdash.
+
+El resto del tiempo se dedicó a ajustar la aplicación, arreglar fallos e implementar las
+últimas peticiones del otro alumno para flexibilizar el \glslink{backend}{backend}.
+
+
+\subsection{Calidad}
+Se ha alcanzado la calidad mínima especificada en sección de la gestión de
+calidad \ref{sec:qua:manag}. En cambio, los elementos de la calidad añadida
+no han sido desarrollados, ya que no se ha dispuesto de los recursos suficientes
+como para dedicarles un tiempo de desarrollo que fuera a culminar en una
+nueva funcionalidad completamente probada. Si no hubiera tenido los desvíos indicados en
+la sección de seguimiento y control del tiempo \textemdash véase sección 
+\ref{sec:syc:time} \textemdash, creo que la única funcionalidad que pudiera
+haber implementado es la onceava.
+
+Finalmente no he podido utilizar la metodología \gls{tdd} en el desarrollo, ya que
+generalmente mi intención era poder \textit{publicar} las funcionalidades cuanto
+antes para que el otro alumno las tuviera listas para trabajar sobre ellas. Antes de
+subir los cambios al repositorio que contenía el código de la aplicación, a veces solía
+dejar el código de los cambios en un servidor de pruebas que usábamos para juntar los
+dos desarrollos, y de mientras iba realizando las pruebas oportunas para que una vez
+se hubiera probado que todo funcionaba bien, subir los cambios al repositorio. Esta
+forma de trabajar me permitía tener un colchón de ventaja sobre el otro alumno y por lo
+tanto podía trabajar más relajadamente. Por contra, la desventaja
+de esta forma de trabajo era que si el otro alumno se ponía a desarrollar sobre una
+funcionalidad que no estaba probada, podía ocurrir que después tuviera que cambiar
+ligeramente su implementación para adaptarla a las correcciones aplicadas después
+de realizar las pruebas, algo que sucedió en alguna ocasión.
+
+\subsection{Riesgos}
+Debido a que los riesgos identificados \ref{section:risks} no se han mostrado
+significativamente a lo largo del desarrollo del proyecto, no se han tenido que
+poner en marcha los planes de contingenciPor contra, la desventaja
+de esta forma de trabajo era que si el otro alumno a \ref{section:continplans}.
+
+Es cierto que hubo un momento en el que quizás podría considerarse que el riesgo
+de 
+\textit{``No tener un producto mínimo que sea funcional cuando el otro
+integrante comience a desarrollar su parte.''} estuvo cerca de cumplirse, ya
+que tal y como relato en la sección de seguimiento y control de tiempo, la
+que corresponde al mes de enero \ref{sec:tnc:jan}, la semana en la que se
+incorporó el otro alumno estaba todavía trasteando con las tecnologías de
+formación y las del desarrollo del producto final. Aunque también he de decir
+que el otro alumno siempre tuvo un \glslink{backend}{backend} operativo con
+el que comenzar su desarrollo.
+
+\section{Conclusiones}
+Con respecto al producto, se ha logrado el objetivo de construir una \gls{api}
+sobre un \glslink{backend}{backend} Symfony que permita ser consumida por
+diferentes \glslink{frontend}{frontends}. La aplicación en sí podría resumirse
+como un conjunto de librerías cohesionadas con las que se ha desarrollado
+un código que realiza la tarea propuesta. Una de las funcionalidades que
+quisiera destacar es que la aplicación en sí ha sido construida enteramente con
+proyectos de \glslink{opensource}{código abierto}, y es por ello que me apena el no haber conseguido
+convencer a los interesados para que el código de la aplicación terminara haciéndose
+público bajo una licencia de software libre o código abierto, aunque entiendo perfectamente
+los intereses corporativos.
+
+La gestión del proyecto, en mi opinión, ha sido aceptable. Creo que tomé una buena
+decisión en no invertir demasiado tiempo en intentar crear un plan de ruta, ya que
+después de todo el proceso de desarrollo, no creo que me hubiera acercado a las
+estimaciones iniciales. Lo que sí que es cierto es que se retrasó demasiado el
+comienzo del desarrollo, y también la formación en la tecnología, lo que en caso
+contrario podría haberme permitido desarrollar alguna funcionalidad más. El objetivo
+de realizar un seguimiento y control exhaustivo se ha cumplido, ya que he tomado nota
+de todo lo que he realizado a lo largo del desarrollo, aunque creo que para una
+próxima vez sería mejor categorizar las tareas realizadas, ya que de esta forma
+se podría elaborar un informe un poco más abstracto, que diera una mejor idea de
+todo lo realizado sin tener que leer una por una todas la tareas que se llevaron a cabo.
+
+En cuanto a los objetivos personales, estoy muy satisfecho de haber podido
+trabajar en un proyecto con el \gls{webframework}{framework} Symfony, ya que uno
+de mis objetivos era poder profundizar y entenderlo mucho mejor, y lo he conseguido.
+También quería seguir las mejores prácticas posibles, y es por ello que entre otras
+cosas he dedicado mucho tiempo a realizar las pruebas de las funcionalidades
+implementadas, y a intentar seguir minuciosamente los patrones y estilos de código
+recomendados, para que si en un futuro se abre el código fuente de la aplicación al público
+no sólo no se pueda poner en evidencia a la empresa por no seguir las prácticas recomendadas,
+sino que tampoco se me pueda poner en evidencia a mi por realizar un desarrollo chapucero. Sé
+que esto último es muy subjetivo, y que a pesar de mis buenas intenciones puede que
+no haya logrado mi objetivo, pero me quedo muy
+tranquilo al saber que he hecho todo lo posible por crear un producto de calidad y
+siguiendo lo que muchos expertos recomiendan y publican en las documentaciones
+oficiales, blogs y salas de soporte de las diferentes tecnologías.
+
+En general, creo que tanto los interesados como yo hemos terminado muy satisfechos
+con el trabajo que este proyecto ha supuesto.
+
+\section{Líneas de trabajo futuras}
+Las líneas de trabajo futuras creo que van encaminadas a completar el desarrollo
+de las funcionalidades opcionales que quedaron sin desarrollar, además de las
+funcionalidades futuras que quieran incluir en la aplicación.
+
+Cuando se me preguntó sobre cómo haría yo para comercializar un producto
+como este, planteé lo siguiente: al ser una aplicación que no es en sí novedosa,
+y de la que se pueden encontrar alternativas en el mercado, una idea podría ser
+la de abrir el código fuente y convertir el proyecto en uno de
+\glslink{opensource}{código abierto}, ofreciendo a su vez un servicio en el que
+la empresa se haría cargo de mantener una instancia del producto por un determinado
+precio, como por ejemplo hace GitLab\footnote{https://gitlab.com/}. Las ventajas
+de este modelo de negocio es que cualquiera puede atreverse a auditar, mejorar,
+sugerir correcciones, aportar críticas e incluso tomar parte en el desarrollo
+del producto, además de que daría una buena imagen a la empresa por tener un proyecto
+\glslink{opensource}{open source}. Las desventajas de este tipo de modelo de negocio
+son que no se puede dejar un producto como este sin actualizar mucho tiempo, y sin
+incorporar nuevas características o mejoras constantes, ya que un proyecto que tiene
+pinta de no haberse actualizado desde hace tiempo resulta poco atractivo. Además, otra
+de las desventajas es que hay que mimar el producto: para que no se ponga en duda
+la profesionalidad de la empresa, sería recomendable seguir las mejores prácticas posibles y
+documentar el código extensamente y de forma inteligible, entre otras cosas. Con todo esto,
+se podría apostar por pelear con el producto en un mercado que ya está saturado de este
+tipo de productos.
+
+El servicio prestado tendría que ser fiable y escalable, de forma que los potenciales
+clientes tuvieran la sensación de que merece la pena pagar por él. De forma que un
+cliente pudiera gestionar varias empresas, podría hacerse para que cada vez que el
+cliente diera de alta una de ellas, se lanzase una instancia de \gls{docker} con
+el producto, e insertando automáticamente ciertos datos que son necesarios para empezar
+a organizar la aplicación \textemdash básicamente la cuenta de un gestor con privilegios
+\textemdash.
+
+Por lo que, en resumen, estas propuestas esconden en sí más proyectos y líneas de trabajo
+futuras sobre las que extender el ecosistema del producto desarrollado en este proyecto.

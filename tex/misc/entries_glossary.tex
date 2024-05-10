@@ -1,0 +1,330 @@
+\newglossaryentry{apig}{
+  name=API,
+  description={
+    Grupo de procedimientos calaremente definidos que facilitan la comunicación entre
+    componentes de software \cite{api_wiki}
+  }
+}
+
+\newglossaryentry{backports}{
+  name=Backports,
+  description={
+    En Debian, los \textit{backports} se denominan a los paquetes recompilados 
+    de las ramas \textit{testing} y \textit{unstable} para poder ser instalados
+    en las distribuciones Debian de la rama estable \cite{backports_debianwiki}
+  }
+}
+
+\newglossaryentry{bddg}{
+  name=Behavior-Driven Development,
+  description={
+    Se considera una extensión de \gls{tdd} que hace uso de un
+    \glslink{lde}{lenguaje de dominio específico} para convertir sentencias
+    escritas en lenguaje natural en pruebas ejecutables \cite{bdd_wiki}
+  }
+}
+
+\newglossaryentry{backend}{
+  name=Back End,
+  description={
+    Capa de lógica y acceso a datos del software \cite{backend_wiki}
+  }
+}
+
+\newglossaryentry{cdg}{
+  name=Continuous delivery,
+  description={
+    La entrega continua consiste en desarrollar el software en ciclos cortos, de forma
+    que se pueda realizar un lanzamiento o un despligue en cualquier comento. El objetivo
+    es construir, probar y lanzar el software con más rapidez y frecuencia \cite{cd_wiki}
+  }
+}
+
+\newglossaryentry{cig}{
+  name=Continuous Integration,
+  description={
+    La integración continua consiste en fusionar todas las copias funcionales de
+    los desarrolladores en una rama común, varias veces al día, con el objetivo de evitar problemas
+    de integración \cite{ci_wiki}
+  }
+}
+
+\newglossaryentry{commit}{
+  name=Commit,
+  description={
+    En sistemas de control de versiones, el \textit{commit} añade los últimos
+    cambios, realizados a parte del código, al repositorio \cite{commit_wiki}
+  }
+}
+
+\newglossaryentry{cookie}{
+  name=Cookie,
+  description={
+    Pequeño fragmento de datos que las aplicaciones web envían a los usuarios,
+    y que generalmente estos últimos almacenan en su navegador, con la finalidad
+    de guardar cierta información de estado \textemdash como por ejemplo
+    sesiones, opciones de personalización de la aplicación o la lista del
+    carro de la compra digital\textemdash. Después esta información se manda
+    de vuelta al servidor para que este último adecúe la aplicación al usuario
+    que mandó la petición \cite{cookies_wiki}
+  }
+}
+
+\newglossaryentry{dbalg}{
+  name=DBAL,
+  description={
+    \gls{api} que tiene como objetivo unificar la comunicación entre la
+    aplicación y las distintas tecnologías de bases de datos, como pueden ser
+    MariaDB, MySQL, SQL Server, etc. La idea es proveer al desarrollador una
+    única interfaz que le evite tener que programar una interfaz por
+    tecnología de base de datos \cite{dbal_wiki}
+  }
+}
+
+\newglossaryentry{dtog}{
+  name=DTO,
+  description={
+    Un objeto que transmite datos entre procesos \cite{dto_wiki}
+  }
+}
+
+\newglossaryentry{docker}{
+  name=Docker,
+  description={
+    Docker es un software que realiza virtualización a nivel de sistema operativo,
+    permitiendo lanzar \textit{``contenedores''} independientes desde una única
+    instancia de Linux, lo que ahorra el coste de gestionar máquinas virtuales \cite{docker_wiki}
+  }
+}
+
+\newglossaryentry{endpoint}{
+  name=Endpoint,
+  description={
+    La \gls{url} de una \gls{api} o un \glslink{backend}{backend} que responden
+    a una petición \cite{endpoint_so}
+  }
+}
+
+\newglossaryentry{fork}{
+  name=Fork,
+  description={
+    Se denomina \textit{fork} a la acción de clonar el código fuente de un 
+    proyecto de software y empezar un desarrollo independiente del mismo, 
+    creando un software distinto y separado del proyecto original 
+    \cite{fork_wiki}
+  }
+}
+
+\newglossaryentry{frontend}{
+  name=Front End,
+  description={
+    Capa de visualización del software \cite{backend_wiki}
+  }
+}
+
+\newglossaryentry{gitlab}{
+  name=GitLab,
+  description={
+    Software web de gestión de repositorios \textit{git} desarrollado con
+    una licencia \glslink{opensource}{opensource} \cite{gitlab_wiki}
+  }
+}
+
+\newglossaryentry{hateoasg}{
+  name=HATEOAS,
+  description={
+    Restricción de la arquitectura \gls{rest}, la cual pretende proveer de
+    indicaciones al consumidor de la \gls{api} sobre qué pasos se pueden dar en
+    ese punto mediante enlaces a las siguientes operaciones disponibles. En un
+    contexto de una aplicación de un banco, la respuesta que un cliente
+    recibiría al hacer una llamada a una operación de consulta de saldo, podría
+    incluir los enlaces a las operaciones de \textit{transferencia},
+    \textit{extracción de dinero} o \textit{consultar movimientos}, por ejemplo
+    \cite{hateoas_so} \cite{hateoas_wiki}
+  }
+}
+
+\newglossaryentry{jira}{
+  name=Jira,
+  description={
+    Software de seguimiento de proyectos e incidencias
+  }
+}
+
+\newglossaryentry{kvmg}{
+  name=Kernel Virtual Machine,
+  description={
+    Solución de virtualización para Linux en la que el kernel se convierte en 
+    el hipervisor \textemdash software, firmware o hardware que se encarga 
+    de gestionar y lanzar máquinas virtuales \cite{hypervisor_wiki} 
+    \textemdash. Permite virtualizar múltiples sistemas operativos Linux, 
+    Windows, BSD, OS X y más, mediante una \gls{api} con la que los susodichos 
+    sistemas operativos pueden interactuar \cite{kvm_wiki}
+  }
+}
+
+
+\newglossaryentry{lde}{
+  name=Lenguaje de dominio específico,
+  description={
+    El \textit{LDE} o más conocido como \textit{DSL} \\ \textemdash Domain
+    Specific Language\textemdash por sus siglas en inglés, es un lenguaje
+    informático especializado en un dominio específico, con el objetivo de
+    facilitar la representación de problemas y la resolución de los mismos
+    \cite{dsl_wiki}
+  }
+}
+
+\newglossaryentry{merge}{
+  name=Merge,
+  description={
+    En sistemas de control de versiones, el \textit{merge} fusiona los cambios
+    realizados en dos ramas en una sola, resultando en una única colección de
+    ficheros que contienen los cambios de las dos ramas \cite{merge_wiki}
+  }
+}
+
+\newglossaryentry{method_overriding}{
+  name=Method overriding,
+  description={
+    Es una característica que permite, en la programación orientada a objetos,
+    proveer de una implementación específica de un método en una subclase, que
+    sustituya la implementación del método de la súper clase \cite{method_over_wiki}
+  }
+}
+
+\newglossaryentry{modentrel}{
+  name=Modelo entidad-relación,
+  description={
+    Un modelo entidad-relación o diagrama \\ entidad-relación es una herramienta
+    para el modelado de datos que permite representar las entidades relevantes
+    de un sistema de información así como sus interrelaciones \cite{modentrel_wiki} y propiedades
+  }
+}
+
+\newglossaryentry{ormg}{
+  name=ORM,
+  description={
+    Técnica que permite consultar y manipular datos en una base de datos
+    utilizando un lenguage de programación orientado a objetos \cite{orm_so}. La técnica
+    consiste en transformar la representación lógica de los objetos en una forma atómica que pueda
+    ser guardada en la base de datos, manteniendo las propiedades de dichos objetos y sus relaciones
+    de tal forma que puedan volver a ser cargados como objetos. Un ejemplo son las bases de datos
+    \glslink{sql}{SQL}, las cuales sólo guardan valores escalares como enteros o cadenas de caracteres en
+    tablas relacionales\cite{orm_wiki}. La técnica permitiría transformar los objetos de tal forma que puedan ser
+    guardados en una tabla relacional, junto con sus relaciones, y que se puedan
+    recuperar con forma de objeto con el lenguaje de programación orientado a objetos, y sin tener que
+    usar \glslink{sql}{SQL}
+  }
+}
+
+\newglossaryentry{opensource}{
+  name=Software Open-Source,
+  description={
+    Tipo de software del cual su código fuente es públicamente accesible,
+    y que tiene una licencia de copyright asociada que permite estudiar,
+    cambiar el código fuente y distribuirlo a cualquier persona y por cualquier
+    motivo. Generalmente este software se suele desarrollar de una manera
+    colaborativa \cite{opensource_wiki}
+  }
+}
+
+\newglossaryentry{pruebascajanegra}{
+  name=Pruebas de caja negra,
+  description={
+    Las pruebas de caja negra son aquellas que analizan la funcionalidad de una
+    aplicación sin tener en cuenta la estructura interna o el funcionamiento de
+    dicha funcionalidad \cite{blackbox_wiki}, centrándose en proporcionar a la
+    funcionalidad una entrada y comprobando que la salida sea la esperada
+  }
+}
+
+\newglossaryentry{push}{
+  name=Push,
+  description={
+    En el sistema de control de versiones \textit{git}, acción con la que se mandan
+    los cambios de tu repositorio al repositorio remoto \cite{push_gitscm}
+  }
+}
+
+
+\newglossaryentry{restg}{
+  name=REST,
+  description={
+    Arquitectura que define un grupo de restricciones y propiedades basadas en el
+    protocolo \gls{http}. Los servicios web que cumplen con esta arquitectura,
+    permiten la consulta y modificación de los recursos web mediante una serie
+    de \glslink{statelessprotocol}{operaciones sin estado}. Las respuestas que remiten estos servicios pueden
+    estar en una amplia variedad de formatos \textemdash como HTML, XML, JSON u
+    otros formatos \textemdash y suelen incluir información sobre el resultado
+    de la operación realizada \cite{rest_wiki}
+  }
+}
+
+\newglossaryentry{semanticweb}{
+  name=Web semántica,
+  description={
+    La web semántica es una extensión de la web que mediante estándares
+    propuestos por la W3C, pretenden impulsar formatos de datos comunes, como
+    pueden ser el RDFa, JSON-LD o HAL. De esta forma, se intenta impulsar una
+    web contextualizada en la que los datos tengan relación entre sí, incluso
+    si dichos datos están diseminados por distintos recursos web \cite{semweb}
+  }
+}
+
+\newglossaryentry{statelessprotocol}{
+  name=Stateless protocol,
+  description={
+    Un protocolo sin estados es un protocolo de comunicación en el que ni el
+    emisor ni el receptor guardan información de estado sobre el otro. Un ejemplo
+    de un protocolo sin estados es una sesión \gls{udp}, ya que ni el emisor ni el receptor
+    guardan información de la sesión en curso mientras ésta dure \cite{stateless_wiki}
+  }
+}
+
+\newglossaryentry{swaggerui}{
+  name=Swagger UI,
+  description={
+    Interfaz de usuario que muestra de forma muy amigable las operaciones de
+    una \gls{api}, además de ofrecer la posibilidad de interactuar con dichas
+    operaciones en la misma página donde se muestran. Esta documentación se
+    genera a partir de una especificación denominada Swagger
+  }
+}
+
+\newglossaryentry{testsfuncionales}{
+  name=Pruebas funcionales,
+  description={
+    Las pruebas funcionales o \textit{functional testing} se consideran como
+    un proceso para asegurar la calidad del software, y también como un
+    tipo de pruebas de la modalidad \glslink{pruebascajanegra}{caja negra}.
+    Generalmente, este tipo de pruebas se realizan introduciendo una entrada y
+    analizando la salida de la funcionalidad en cuestión que se está probando,
+    comprobando que todo funciona según las especificaciones de dicha
+    funcionalidad \cite{functionalt_wiki}
+  }
+}
+
+\newglossaryentry{webframework}{
+  name=Web Framework,
+  description={
+    Un \textit{Web Framework} es una abstracción en la que un software que
+    provee de una funcionalidad genérica puede ser selectivamente modificada
+    adiciones, modificaciones o eliminaciones de código. Estos
+    \textit{frameworks} ayudan en el desarrollo de aplicaciones web, incluyendo
+    servicios web, recursos web y \gls{api}s web. El objetivo de estas
+    herramientas es el de automatizar ciertas tareas y ahorrar tiempo en las
+    actividades comunes asociadas al desarrollo web
+  }
+}
+
+\newglossaryentry{tddg}{
+  name=Test Driven Development,
+  description={
+    El \gls{tdd} es un proceso de desarrollo de software que se basa en la
+    repetición de un ciclo de desarrollo muy corto: los requerimientos se
+    convierten en casos de pruebas muy específicos, y únicamente está permitido
+    programar para hacer que dichos casos de prueba se realicen
+    satisfactoriamente \cite{tdd_wiki}
+  }
+}

@@ -1,0 +1,218 @@
+\section{Gestión del alcance del proyecto}
+La propuesta del proyecto incluye unas indicaciones generales de cómo quiere
+la empresa que sea la aplicación, pero son insuficientes para poder realizar
+un análisis realista del alcance que va a tener el proyecto.
+
+Además, hay que tener en cuenta que el objetivo de este proyecto es realizar
+una aplicación que funcione de forma cohesionada entre los diferentes
+departamentos de la empresa, por lo que es muy probable que las
+requerimientos cambien a lo largo del desarrollo del proyecto, o se tengan
+que modificar.
+
+\subsection{Planificación de la gestión del alcance}
+El alcance del proyecto se generará una vez se conozcan, validen y contrasten
+todos los requerimientos recogidos. Después, se generará la \gls{edt} una vez
+se disponga de la primera versión del alcance, e incluirá todos los aspectos
+del \gls{pfm}: planificación, gestión, desarrollo, seguimiento y control y
+cierre.
+
+El seguimiento y control del alcance se realizará a lo largo del desarrollo
+del proyecto, revisando también los requerimientos, para evaluar si será
+necesaria la aplicación de una modificación al alcance y al \gls{edt}. Antes de
+hacer efectiva una modificación se tendrá que evaluar y comprobar que la
+aplicación de dicha modificación no afecte a la viabilidad del proyecto.
+Seguidamente se comprobará el \gls{edt} y se verificará si es necesario también
+un cambio en dicha estructura.
+
+\subsection{Planificación de la gestión de requerimientos}
+\label{subsec:pgr}
+Los trabajadores usan actualmente una aplicación determinada de seguimiento y
+control de tiempos, clientes y proyectos. Es por ello que es crucial realizar
+entrevistas con los trabajadores de los diferentes departamentos para extraer
+de sus respuestas aquellas cosas que les gustan, las que no, y las que
+mejorarían, además de su experiencia en general usando dicha aplicación. Al
+procesar estas respuestas se podrán obtener los requerimientos del producto
+a desarrollar y, finalmente, su validación consistirá en exponer dichos
+requerimientos ante los interesados del proyecto, dando su visto bueno o no
+a aquellos puntos con los que estén de acuerdo.
+
+El seguimiento y control de los requerimientos se realizará a lo largo del
+desarrollo del proyecto, cuando los diferentes interesados de la aplicación
+contrasten que los requerimientos indicados y las que finalmente han sido
+implementadas coinciden.
+
+En caso de que los requerimientos tengan que sufrir algún cambio, se
+evaluará si el nuevo requerimiento, o la modificación de uno ya existente,
+es viable y se puede llevar a cabo. Se podrá modificar la prioridad e
+importancia de los diferentes requerimientos, e incluso descartar unos
+requerimientos por otros. En caso de que los cambios en los requerimientos
+supongan un cambio drástico en el proyecto, se realizará una reunión con
+los interesados del proyecto para ratificar dicho cambio.
+
+\subsection{Recopilación de requerimientos}
+\label{subsec:rdr}
+Tras realizar el proceso descrito en \ref{subsec:pgr}, se validaron los
+siguientes requerimientos que deberá tener la aplicación, ordenados por 
+importancia:
+
+\begin{enumerate}
+\label{enum:req:lis}
+ \item Desarrollar un \gls{backend} en forma de \gls{api} \gls{rest} que
+ permita intercambiar datos con un \gls{frontend}
+
+ \item El \gls{backend} ha de proporcionar control de acceso para restringir el
+ contenido visible \textemdash ya sea restringiendo el acceso a recursos
+ completos o limitando la información mostrada en recursos específicos
+ \textemdash dependiendo de una serie de roles.
+ 
+ \item La aplicación ha de dar la opción de gestionar clientes, y asignarles
+ proyectos y grupos de proyectos a dichos clientes.
+ 
+ \item La aplicación ha de permitir poder gestionar, a parte de los propios 
+ proyectos, los presupuestos, bolsas de horas, usuarios, tareas y categorías 
+ asociadas.
+ 
+ \item La aplicación ha de desarrollarse de forma que pueda ser fácilmente 
+ mantenible y que permita la extensión y mejora en el futuro.
+
+ \item Los proyectos de la aplicación deberán tener una estructura común, y
+ los gestores deberán tener la opción de modificar dicha estructura según
+ las necesidades específicas de cada proyecto.
+
+ \item La aplicación permitirá crear informes que recopilen datos por proyecto,
+ departamento y por trabajador.
+
+ \item La aplicación permitirá crear listas de favoritos, plantillas, o
+ reordenar las tareas por usuario para facilitar la imputación de horas.
+
+ \item La aplicación permitirá cerrar y reabrir los proyectos.
+
+ \item La aplicación permitirá a los gestores de proyectos imputar horas a
+ terceras personas, por ejemplo en el caso de que haya un trabajador por cuenta
+ propia contratado.
+ 
+ \item La aplicación permitirá enviar recordatorios a aquellos usuarios que
+ se les haya olvidado imputar horas.
+
+ \item La aplicación tendrá una integración con \gls{jira}
+
+ \item La aplicación permitirá crear procesos a los gestores para facilitar
+ la gestión.
+
+ \item La aplicación permitirá visualizar de forma sencilla qué personas
+ están de vacaciones.
+
+ \item Todos los proyectos tendrán que compartir los mismos colores en las
+ categorías comunes.
+
+ \item Una aplicación de escritorio que facilite la imputación de horas
+ y, que entre las funcionalidades estándar de la aplicación, tenga una que
+ ayude a realizar el seguimiento de la tarea que se está realizando en
+ ese momento mediante un botón \textit{play / stop}.
+
+ \item La interfaz ha de ser rápida y sencilla de usar para imputar horas de
+ tareas individuales y un grupo de tareas.
+
+ \item La interfaz ha de mostrar a cada usuario cuántas horas ha imputado
+ a lo largo de la semana y cuántas le restan por imputar para completar sus
+ horas semanales.
+
+ \item La interfaz ha de mostrar sugerencias para las imputaciones: que analice
+ las últimas imputaciones para recomendar y ayudar a imputar cuando se trabaja
+ en las mismas tareas o en los mismos proyectos.
+
+ \item La interfaz ha de permitir a cada usuario limitar su vista de horas a la
+ jornada laboral que realiza, ahorrando así el tener que deslizarse hasta la
+ hora de inicio y hora de finalización de la jornada.
+
+ \item La interfaz ha de permitir a cada usuario configurar la vista de las
+ imputaciones: diaria, semanal y mensual.
+\end{enumerate}
+
+\subsection{Alcance}
+El alcance de este proyecto abarca no sólo el desarrollo del producto en sí,
+sino también la gestión del proyecto que dé como resultado dicho producto. Esto
+incluye la planificación, diseño y desarrollo del producto, extracción de
+conclusiones y líneas futuras, realización del seguimiento y control del
+proyecto y la redacción de la documentación del proyecto.
+
+En cuanto al producto en sí, las secciones de calidad mínima \ref{sec:min:qual}
+y calidad añadida \ref{sec:add:qual}, recogen qué requisitos serán tenidos en
+cuenta a la hora de desarrollar el producto. No obstante, es necesario explicar
+que los requerimientos recogen especificaciones para el desarrollo tanto de
+un \glslink{backend}{backend}, como de un \glslink{frontend}{frontend}, y que
+este proyecto se centra únicamente en el desarrollo del
+\glslink{backend}{backend}. Esto se debe a que en un principio se propuso
+realizar el proyecto al completo, pero después de recoger los requerimientos
+y especificar las calidades que debería de tener el producto, consideré que
+el realizar el desarrollo de las dos partes culminaría en un resultado que
+haría honor al refrán \textit{``quien mucho abarca, poco aprieta''}. Tras
+exponer mis dudas a los interesados, se me propuso dividir la propuesta en
+dos proyectos individuales, de los cuales uno de ellos se me asignó a mí, y
+el otro proyecto se asignó a otro alumno de la misma facultad donde cursé
+el máster.
+
+\subsection{EDT}
+\begin{verbatim}
+Clepsydra
+├ Gestión
+│ └ Planificación
+│   ├ Alcance
+│   │ ├ Gestión del alcance
+│   │ ├ Gestión de requerimientos
+│   │ ├ Requerimientos
+│   │ ├ Alcance
+│   │ ├ EDT
+│   │ ├ Gestión de la validación del alcance
+│   │ └ Gestión del seguimiento y control del alcance
+│   ├ Tiempo
+│   │ ├ Gestión del tiempo
+│   │ ├ Definición de actividades
+│   │ ├ Secuencia de actividades
+│   │ ├ Estimación de la duración de las actividades
+│   │ └ Gestión del seguimiento y control de las actividades
+│   ├ Calidad
+│   │ ├ Gestión de la calidad
+│   │ ├ Calidad mínima y calidad añadida
+│   │ └ Gestión del seguimiento y control de la calidad
+│   ├ Riesgos
+│   │ ├ Gestión de riesgos
+│   │ ├ Riesgos
+│   │ └ Planes de contingencia
+│   ├ Seguimiento y control
+│   │ ├ Seguimiento y control del alcance
+│   │ ├ Seguimiento y control del tiempo
+│   │ ├ Seguimiento y control de la calidad
+│   │ └ Seguimiento y control de los riesgos
+│   └ Cierre
+│     ├ Gestión del cierre
+│     ├ Presentación del PFM
+│     └ Cierre
+├ Diseño
+│ ├ Diseño de la base de datos
+│ ├ Diseño de los casos de uso
+│ └ Diseño y documentación de la API
+└ Desarrollo
+  ├ Formación
+  ├ Implementación
+  ├ Corrección de errores
+  └ Testing
+\end{verbatim}
+
+\subsection{Validación del alcance}
+La validación del alcance se hará junto con los requerimientos del proyecto,
+en una reunión con los interesados del proyecto. En el caso de que se propongan
+alteraciones se tomarán en consideración y se realizarán las modificaciones
+oportunas acorde con lo expuesto.
+
+En caso de que sea necesario modificar el alcance a lo largo del ciclo de
+vida del proyecto, se tendrán que validar dichos cambios con los diferentes
+interesados.
+
+\subsection{Seguimiento y control del alcance}
+\label{subsec:syc:scope}
+El seguimiento del alcance se realizará periódicamente, cada Lunes de cada
+semana, desde la fecha de inicio del desarrollo de la aplicación, comprobando
+qué requerimientos se han cumplido, cuales faltan por cumplir, y cuales hay
+que descartar en el caso de que no se dispongan de los suficientes recursos
+para dedicar a dichos requerimientos.
